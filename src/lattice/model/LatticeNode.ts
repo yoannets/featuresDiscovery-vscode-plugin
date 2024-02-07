@@ -1,6 +1,9 @@
+import { NodeFeatureType } from "../graph/model/NodeFeatureType";
 import { Visitor, Direction } from "../visitors/Visitor";
 
 export interface LatticeNode {
+  parents: Set<LatticeNode>;
+  children: Set<LatticeNode>;
   getExtent(): Set<any>;
   addToExtent(anObject: any): void;
   addCollectionToExtent(objects: Array<any>): void;

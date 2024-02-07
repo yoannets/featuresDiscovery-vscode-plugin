@@ -35,7 +35,7 @@ export abstract class AbstractVisitor implements Visitor {
 
     switch (direction) {
       case Direction.TopDown:
-        if (latticeNode.children.length > 0) {
+        if (latticeNode.children.size > 0) {
           this.preprocessChildren(latticeNode);
           for (const child of latticeNode.children) {
             this.visitLatticeNode(child, direction);
@@ -43,7 +43,7 @@ export abstract class AbstractVisitor implements Visitor {
         }
         break;
       case Direction.BottomUp:
-        if (latticeNode.parents.length > 0) {
+        if (latticeNode.parents.size > 0) {
           this.preprocessParents(latticeNode);
           for (const parent of latticeNode.parents) {
             this.visitLatticeNode(parent, direction);

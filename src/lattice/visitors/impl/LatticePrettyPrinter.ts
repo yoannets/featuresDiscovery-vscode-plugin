@@ -44,7 +44,7 @@ export const JAVA_ELEMENT_PRINTER: ElementPrinter = {
 
 export class LatticePrettyPrinter implements Visitor {
   protected printer: ElementPrinter;
-  private nodeIndents: Map<LatticeNode, string>;
+  protected nodeIndents: Map<LatticeNode, string>;
   private ids: Map<LatticeNode, string>;
   private globalCounter: number = 0;
 

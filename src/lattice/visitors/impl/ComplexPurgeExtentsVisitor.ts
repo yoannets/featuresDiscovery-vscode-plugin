@@ -1,7 +1,8 @@
 // @TODO: Fixe eclipse types
-import { Visitor } from "../Visitor";
+import { Direction, Visitor } from "../Visitor";
 import { LatticeNode } from "../../model/LatticeNode";
 import { ReverseInheritanceRelationBuilder } from "../../../input/impl/ReverseInheritanceRelationBuilder";
+import { Lattice } from "../../model/Lattice";
 
 /**
  * This visitor traverses the lattice, and for each node, purges the extent of
@@ -28,6 +29,27 @@ export class ComplexPurgeExtentsVisitor implements Visitor {
   constructor(builder: ReverseInheritanceRelationBuilder) {
     this.relationBuilder = builder;
   }
+
+  // @TODO: Fixe not implemented methods
+  visitLatticeFromTop(aLattice: Lattice): void {
+    throw new Error("Method not implemented.");
+  }
+  visitLatticeFromBottom(aLattice: Lattice): void {
+    throw new Error("Method not implemented.");
+  }
+  getCurrentVisitDirection(): Direction {
+    throw new Error("Method not implemented.");
+  }
+  visitLatticeNode(latticeNode: LatticeNode, direction: Direction): void {
+    throw new Error("Method not implemented.");
+  }
+  processVisitedNode(node: LatticeNode): void {
+    throw new Error("Method not implemented.");
+  }
+  reset(): void {
+    throw new Error("Method not implemented.");
+  }
+  // END
 
   public processNode(node: LatticeNode): void {
     // First, if this is the top node, exit

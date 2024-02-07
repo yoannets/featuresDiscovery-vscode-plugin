@@ -22,6 +22,10 @@ export class PrintCandidatesVisitor extends LatticePrettyPrinter {
     return this.nodes;
   }
 
+  public getNodeIndents(): Map<LatticeNode, String> {
+    return nodeIndents;
+  }
+
   preprocessChildren(node: LatticeNode): void {
     let nodeIndent = this.getNodeIndents().get(node) || "";
     if (this.candidateNodes.has(node)) {

@@ -6,8 +6,8 @@ export class LatticeNodeImpl implements LatticeNode {
   private name: string;
   private intent: Set<Object>;
   private extent: Set<Object>;
-  private parents: Set<LatticeNode>;
-  private children: Set<LatticeNode>;
+  parents: Set<LatticeNode>;
+  children: Set<LatticeNode>;
   private types: NodeFeatureType[];
 
   constructor() {
@@ -16,6 +16,14 @@ export class LatticeNodeImpl implements LatticeNode {
     this.parents = new Set<LatticeNode>();
     this.children = new Set<LatticeNode>();
     this.types = [];
+  }
+
+  setIntent(intent: Set<any>) {
+    this.intent = intent;
+  }
+
+  setExtent(extent: Set<any>) {
+    this.extent = extent;
   }
 
   getExtent(): Set<Object> {

@@ -1,8 +1,29 @@
 // @TODO: Fixe eclipse types
+import { Lattice } from "../../model/Lattice";
 import { LatticeNode } from "../../model/LatticeNode";
-import { Visitor } from "../Visitor";
+import { Direction, Visitor } from "../Visitor";
 
 export class SimplePurgeExtentsVisitor implements Visitor {
+  visitLatticeFromTop(aLattice: Lattice): void {
+    throw new Error("Method not implemented.");
+  }
+
+  visitLatticeFromBottom(aLattice: Lattice): void {
+    throw new Error("Method not implemented.");
+  }
+  getCurrentVisitDirection(): Direction {
+    throw new Error("Method not implemented.");
+  }
+  visitLatticeNode(latticeNode: LatticeNode, direction: Direction): void {
+    throw new Error("Method not implemented.");
+  }
+  processVisitedNode(node: LatticeNode): void {
+    throw new Error("Method not implemented.");
+  }
+  reset(): void {
+    throw new Error("Method not implemented.");
+  }
+
   processNode(node: LatticeNode): void {
     let intersection: Set<Object> | null = null;
     const extent: Set<Object> = node.getExtent();
@@ -28,10 +49,8 @@ export class SimplePurgeExtentsVisitor implements Visitor {
             classesToProcess.splice(classesToProcess.indexOf(cls), 1);
           }
         });
-      } catch (jme: any) {
-        if (jme instanceof JavaModelException) {
-          console.error(jme);
-        }
+      } catch (err) {
+        console.error(err);
       }
     }
   }
