@@ -9,7 +9,7 @@
     "sourceMap": true,
     "outDir": "dist",
     "resolveJsonModule": true,
-    "types": ["node", "jest"],
+    "types": ["node", "jest", "vscode"],
     "typeRoots": ["node_modules/@types"],
     "skipLibCheck": true
   },

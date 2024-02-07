@@ -1,5 +1,5 @@
-import { Lattice } from "./Lattice";
-import { LatticeNode } from "./LatticeNode";
+import { Lattice } from "../model/Lattice";
+import { LatticeNode } from "../model/LatticeNode";
 
 export enum Direction {
   Undefined,

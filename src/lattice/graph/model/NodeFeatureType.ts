@@ -1,4 +1,4 @@
-export class NodeFeatureType implements Serializable {
+export class NodeFeatureType {
   private featureTypeName: string;
   private anchor: string;
   private coverage: number;

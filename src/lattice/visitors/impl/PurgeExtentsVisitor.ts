@@ -1,10 +1,8 @@
-import { LatticeNode } from "./LatticeNode";
-import { IJavaProject } from "./IJavaProject";
-import { IType } from "./IType";
-import { ITypeHierarchy } from "./ITypeHierarchy";
-import { JavaModelException } from "./JavaModelException";
+// @TODO: Fixe eclipse types
+import { LatticeNode } from "../../model/LatticeNode";
+import { Visitor } from "../Visitor";
 
-class PurgeExtentsVisitor implements Visitor {
+export class PurgeExtentsVisitor implements Visitor {
   private javaProject: IJavaProject;
 
   constructor(project: IJavaProject) {

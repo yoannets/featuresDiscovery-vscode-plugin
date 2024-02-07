@@ -1,6 +1,6 @@
-import { Lattice } from "./Lattice";
-import { LatticeNode } from "./LatticeNode";
+import { LatticeNode } from "../../model/LatticeNode";
 import { Visitor, Direction } from "../Visitor";
+import { Lattice } from "../../model/Lattice";
 
 export abstract class AbstractVisitor implements Visitor {
   private visitedNodes: Set<LatticeNode> = new Set<LatticeNode>();

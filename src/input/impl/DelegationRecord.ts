@@ -1,4 +1,4 @@
-import { IMethod, IType } from "your-eclipse-jdt-core-module"; // Assurez-vous d'importer correctement ces types depuis votre module Eclipse JDT Core.
+import { IMethod, IType } from "your-eclipse-jdt-core-module";
 
 export class DelegationRecord {
   private mainType: IType;

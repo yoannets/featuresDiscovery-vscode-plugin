@@ -1,8 +1,6 @@
-class Token {
-  constructor(public value: string, public javaSourceFormat: boolean) {}
-}
+import { Token } from "./Token";
 
-class Input {
+export class Input {
   private _tokens: Token[];
   private _index: number;
   private _javaSourceFormat: boolean;

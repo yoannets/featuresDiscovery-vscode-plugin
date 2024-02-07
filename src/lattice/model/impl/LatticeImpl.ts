@@ -1,7 +1,8 @@
-import { Lattice, LatticeNode } from "./your-lattice-model-path"; // Assurez-vous d'importer correctement Lattice et LatticeNode depuis votre module
-import { Visitor } from "./your-visitor-path"; // Assurez-vous d'importer correctement Visitor depuis votre module
+import { Visitor } from "../../visitors/Visitor";
+import { Lattice } from "../Lattice";
+import { LatticeNode } from "../LatticeNode";
 
-class LatticeImpl implements Lattice {
+export class LatticeImpl implements Lattice {
   private top: LatticeNode;
   private bottom: LatticeNode;
 

@@ -1,10 +1,12 @@
-class PrettyPrinter extends AbstractVisitor2 {
+import { AbstractVisitor2 } from "./AbstractVisitor2";
+
+export class PrettyPrinter extends AbstractVisitor2 {
   private _output: string;
   private _cleanOutput: boolean;
   private _outputSignatureFormat: boolean;
 
   constructor(cleanOutput: boolean, outputSignatureFormat: boolean) {
-    super();
+    super(false);
     this._cleanOutput = cleanOutput;
     this._outputSignatureFormat = outputSignatureFormat;
     this._output = "";

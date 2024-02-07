@@ -1,10 +1,6 @@
-// @TODO: Called Node in past
+import { Type } from "./Type";
 
-class Type {
-  // Define Type class properties and methods as needed
-}
-
-class TreeNode {
+export class Node {
   private _parent: Node | null;
   private _childs: Node[];
   private _type: Type;
@@ -68,6 +64,6 @@ class TreeNode {
   }
 
   toString(): string {
-    return `${super.toString()} [${this._childs.length} childs]`;
+    return `[${this._childs.length} childs]`; // @TODO: Fixe to string method (return super.toString() + "[" + _childs.size() + " childs]")
   }
 }

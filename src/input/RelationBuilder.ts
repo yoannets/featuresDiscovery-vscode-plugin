@@ -1,4 +1,4 @@
-import { Relation } from "./lattice/model/Relation";
+import { Relation } from "../lattice/model/Relation";
 
 export interface RelationBuilder {
   buildRelationFrom(aJavaProject: any): Relation;

@@ -1,5 +1,7 @@
+// @TODO: Fixe eclipse types
 import { Visitor } from "../Visitor";
-import { LatticeNode } from "../model/LatticeNode";
+import { LatticeNode } from "../../model/LatticeNode";
+import { ReverseInheritanceRelationBuilder } from "../../../input/impl/ReverseInheritanceRelationBuilder";
 
 /**
  * This visitor traverses the lattice, and for each node, purges the extent of

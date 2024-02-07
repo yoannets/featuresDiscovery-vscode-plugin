@@ -1,7 +1,8 @@
-import { RelationBuilder } from "./your-relation-builder-path";
+import { RelationBuilder } from "../../../input/RelationBuilder";
 import { IMethod, IType, JavaModelException } from "your-eclipse-jdt-core-path";
+import { RelationImpl } from "./RelationImpl";
 
-class ReverseInheritanceRelation extends RelationImpl {
+export class ReverseInheritanceRelation extends RelationImpl {
   constructor(aBuilder: RelationBuilder) {
     super(aBuilder);
   }

@@ -1,4 +1,4 @@
-class Token {
+export class Token {
   private _chars: string;
   private _java_source_format: boolean;
 

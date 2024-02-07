@@ -1,7 +1,8 @@
-import { LatticeNode, NodeFeatureType } from "./your-lattice-model-path";
-import { Visitor } from "./your-visitor-path";
+import { LatticeNode } from "../LatticeNode";
+import { Direction, Visitor } from "../../visitors/Visitor";
+import { NodeFeatureType } from "../../graph/model/NodeFeatureType";
 
-class LatticeNodeImpl implements LatticeNode {
+export class LatticeNodeImpl implements LatticeNode {
   private name: string;
   private intent: Set<Object>;
   private extent: Set<Object>;
@@ -73,7 +74,7 @@ class LatticeNodeImpl implements LatticeNode {
     this.parents.delete(parentNode);
   }
 
-  acceptVisitor(aVisitor: Visitor, direction: Visitor.Direction): void {
+  acceptVisitor(aVisitor: Visitor, direction: Direction): void {
     aVisitor.visitLatticeNode(this, direction);
   }
 

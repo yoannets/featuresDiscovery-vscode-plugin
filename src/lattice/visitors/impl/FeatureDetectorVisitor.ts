@@ -1,6 +1,6 @@
 import { Visitor } from "../Visitor";
-import { LatticeNode } from "../model/LatticeNode";
-import { ReverseInheritanceRelationBuilder } from "../input/ReverseInheritanceRelationBuilder";
+import { LatticeNode } from "../../model/LatticeNode";
+import { ReverseInheritanceRelationBuilder } from "../../../input/impl/ReverseInheritanceRelationBuilder";
 import {
   IType,
   IField,

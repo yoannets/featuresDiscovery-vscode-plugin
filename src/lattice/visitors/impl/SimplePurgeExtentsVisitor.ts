@@ -1,10 +1,8 @@
-import { LatticeNode } from "./LatticeNode";
-import { IJavaProject } from "./IJavaProject";
-import { IType } from "./IType";
-import { ITypeHierarchy } from "./ITypeHierarchy";
-import { JavaModelException } from "./JavaModelException";
+// @TODO: Fixe eclipse types
+import { LatticeNode } from "../../model/LatticeNode";
+import { Visitor } from "../Visitor";
 
-class SimplePurgeExtentsVisitor implements Visitor {
+export class SimplePurgeExtentsVisitor implements Visitor {
   processNode(node: LatticeNode): void {
     let intersection: Set<Object> | null = null;
     const extent: Set<Object> = node.getExtent();

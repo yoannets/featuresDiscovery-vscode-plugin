@@ -1,6 +1,10 @@
-import { IType } from "your-module-path"; // Assurez-vous d'importer correctement IType depuis votre module
+// @TODO: Fixe eclipse types
+import { AbstractVisitor2 } from "./AbstractVisitor2";
+import { Parser } from "./Parser";
+import { PrettyPrinter } from "./PrettyPrinter";
+import { Type } from "./Type";
 
-class TypeResolver extends AbstractVisitor2 {
+export class TypeResolver extends AbstractVisitor2 {
   private _context: IType;
 
   constructor(context: IType) {

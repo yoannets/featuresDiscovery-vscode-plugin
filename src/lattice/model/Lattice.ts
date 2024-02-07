@@ -1,7 +1,7 @@
-import { LatticeNode } from "your-module-path";
-import { Visitor } from "your-module-path";
+import { LatticeNode } from "./LatticeNode";
+import { Visitor } from "../visitors/Visitor";
 
-interface Lattice {
+export interface Lattice {
   getTop(): LatticeNode;
   getBottom(): LatticeNode;
   setTop(top: LatticeNode): void;

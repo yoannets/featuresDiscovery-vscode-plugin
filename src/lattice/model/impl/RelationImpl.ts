@@ -1,6 +1,7 @@
-import { RelationBuilder } from "./your-relation-builder-path";
+import { RelationBuilder } from "../../../input/RelationBuilder";
+import { Relation } from "../Relation";
 
-class RelationImpl implements Relation {
+export class RelationImpl implements Relation {
   private builder: RelationBuilder;
   private relationStore: Map<Object, Set<Object>>;
 

@@ -1,9 +1,13 @@
-interface ElementPrinter {
+// @TODO: Fixe eclipse types
+import { LatticeNode } from "../../model/LatticeNode";
+import { Visitor } from "../Visitor";
+
+export interface ElementPrinter {
   printIntentElement(intentElement: any): string;
   printExtentElement(extentElement: any): string;
 }
 
-const DEFAULT_ELEMENT_PRINTER: ElementPrinter = {
+export const DEFAULT_ELEMENT_PRINTER: ElementPrinter = {
   printIntentElement(intentElement: any): string {
     return intentElement.toString();
   },
@@ -12,7 +16,7 @@ const DEFAULT_ELEMENT_PRINTER: ElementPrinter = {
   },
 };
 
-const JAVA_ELEMENT_PRINTER: ElementPrinter = {
+export const JAVA_ELEMENT_PRINTER: ElementPrinter = {
   printIntentElement(intentElement: any): string {
     const method = intentElement as IMethod;
     try {
@@ -38,8 +42,8 @@ const JAVA_ELEMENT_PRINTER: ElementPrinter = {
   },
 };
 
-class LatticePrettyPrinter implements Visitor {
-  private printer: ElementPrinter;
+export class LatticePrettyPrinter implements Visitor {
+  protected printer: ElementPrinter;
   private nodeIndents: Map<LatticeNode, string>;
   private ids: Map<LatticeNode, string>;
   private globalCounter: number = 0;

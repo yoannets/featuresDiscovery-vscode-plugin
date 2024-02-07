@@ -1,9 +1,7 @@
-class Type {
+export class Type {
   private _typename: string;
   private _type_is_array: boolean;
 
-  constructor(typename: string);
-  constructor(typename: string, type_is_array: boolean);
   constructor(typename: string, type_is_array?: boolean) {
     this._typename = typename;
     this._type_is_array = type_is_array || false;

@@ -1,21 +1,19 @@
-abstract class TreeNode {
-  abstract getChilds(): TreeNode[];
-}
+import { Node } from "./Node";
 
-abstract class AbstractVisitor2 {
+export abstract class AbstractVisitor2 {
   private _depth_first: boolean;
 
   constructor(depth_first: boolean) {
     this._depth_first = depth_first;
   }
 
-  visit(node: TreeNode): void {
+  visit(node: Node): void {
     this.onVisitStart(node);
     this._visit(node);
     this.onVisitEnd();
   }
 
-  private _visit(node: TreeNode): void {
+  private _visit(node: Node): void {
     this.beforeNode(node);
 
     if (this._depth_first) {
@@ -37,11 +35,11 @@ abstract class AbstractVisitor2 {
     this.afterNode(node);
   }
 
-  protected beforeNode(node: TreeNode): void {
+  protected beforeNode(node: Node): void {
     // Default implementation does nothing
   }
 
-  protected afterNode(node: TreeNode): void {
+  protected afterNode(node: Node): void {
     // Default implementation does nothing
   }
 
@@ -53,7 +51,7 @@ abstract class AbstractVisitor2 {
     // Default implementation does nothing
   }
 
-  protected onVisitStart(node: TreeNode): void {
+  protected onVisitStart(node: Node): void {
     // Default implementation does nothing
   }
 
@@ -61,5 +59,5 @@ abstract class AbstractVisitor2 {
     // Default implementation does nothing
   }
 
-  protected abstract onNode(node: TreeNode): void;
+  protected abstract onNode(node: Node): void;
 }

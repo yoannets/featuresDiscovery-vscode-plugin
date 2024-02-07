@@ -1,6 +1,6 @@
-import { RelationBuilder } from "./RelationBuilder";
-import { Lattice } from "./Lattice";
-import { Relation } from "./Relation";
+import { RelationBuilder } from "../input/RelationBuilder";
+import { Lattice } from "./model/Lattice";
+import { Relation } from "./model/Relation";
 
 export interface LatticeBuilder {
   /**

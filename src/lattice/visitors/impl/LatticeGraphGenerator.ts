@@ -1,37 +1,14 @@
-class NodeFeatureType {
-  featureTypeName: string = "";
-  anchor: string = "";
-  coverage: number = 0;
-}
+import { NodeFeatureType } from "../../graph/model/NodeFeatureType";
+import { LatticeNode } from "../../model/LatticeNode";
+import { Visitor } from "../Visitor";
+import { AbstractVisitor } from "./AbstractVisitor";
+import { FeatureType } from "./FeatureDetectorVisitor";
 
-class FeatureTypeTag {
-  name: string = "";
-  anchorType: string = "";
-  anchorTypeBehaviorCoverage: number = 0;
-}
-
-class FeatureType {
-  featureTags: FeatureTypeTag[] = [];
-}
-
-class LatticeNode {
-  extent: string[] = [];
-  intent: string[] = [];
-  types: NodeFeatureType[] = [];
-  children: LatticeNode[] = [];
-  parents: LatticeNode[] = [];
-  name: string = "";
-
-  constructor(extent: string[], intent: string[]) {
-    this.extent = extent;
-    this.intent = intent;
-  }
-}
-
-class LatticeGraphGenerator {
+export class LatticeGraphGenerator extends AbstractVisitor implements Visitor {
   candidateNodes: Map<LatticeNode, FeatureType>;
 
   constructor(typedFeatureNodes: Map<LatticeNode, FeatureType>) {
+    super();
     this.candidateNodes = typedFeatureNodes;
   }
 

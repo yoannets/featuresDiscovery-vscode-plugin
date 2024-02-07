@@ -3,7 +3,7 @@ import {
   IPropertyDescriptor,
   IPropertySource,
 } from "some-library-path"; // Chemin fictif, remplacez-le par le chemin réel
-import { NodeFeatureType } from "./node-feature-type"; // Assurez-vous de remplacer le chemin par le bon
+import { NodeFeatureType } from "./NodeFeatureType";
 
 export class Node implements IAdaptable, IPropertySource {
   private name: string;

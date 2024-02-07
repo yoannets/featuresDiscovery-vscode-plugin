@@ -1,6 +1,6 @@
-import { RelationBuilder } from "your-relation-builder-path"; // Assurez-vous d'importer correctement RelationBuilder depuis votre module
+import { RelationBuilder } from "../../input/RelationBuilder";
 
-interface Relation {
+export interface Relation {
   addToDomain(anObject: any): void;
   removeFromDomain(anObject: any): void;
   addRelation(key: any, value: any): void;

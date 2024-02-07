@@ -1,10 +1,10 @@
-import { Visitor } from "your-visitor-path"; // Assurez-vous d'importer correctement Visitor depuis votre module
+import { Visitor, Direction } from "../visitors/Visitor";
 
-interface LatticeNode {
+export interface LatticeNode {
   getExtent(): Set<any>;
   addToExtent(anObject: any): void;
-  addCollectionToExtent(objects: Collection<any>): void;
-  addCollectionToIntent(properties: Collection<any>): void;
+  addCollectionToExtent(objects: Array<any>): void;
+  addCollectionToIntent(properties: Array<any>): void;
   removeFromExtent(anObject: any): void;
   removeFromIntent(anObject: any): void;
   addToIntent(anObject: any): void;
@@ -17,7 +17,7 @@ interface LatticeNode {
   hasParent(parentNode: LatticeNode): boolean;
   hasChild(childNode: LatticeNode): boolean;
   removeParent(parentNode: LatticeNode): void;
-  acceptVisitor(aVisitor: Visitor, direction: VisitorDirection): void;
+  acceptVisitor(aVisitor: Visitor, direction: Direction): void;
   copy(): LatticeNode;
   takePlaceOf(another: LatticeNode): void;
   setIntent(intent: Set<any>): void;

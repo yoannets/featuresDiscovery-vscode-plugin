@@ -1,4 +1,8 @@
-class ReverseInheritanceRelationBuilder implements RelationBuilder {
+// @TODO: Fixe eclipse types
+import { Relation } from "../../lattice/model/Relation";
+import { RelationBuilder } from "../RelationBuilder";
+
+export class ReverseInheritanceRelationBuilder implements RelationBuilder {
   private javaProject: IJavaProject | null;
   private methodImplementations: Map<string, MethodEntry>;
   private definedTypes: Set<IType> | null;

@@ -1,4 +1,4 @@
-import { LatticeNode } from "./LatticeNode";
+import { LatticeNode } from "../../model/LatticeNode";
 
 /**
  * This visitor constructs the set C[i] in line 12 of the algorithm named Algorithm 1

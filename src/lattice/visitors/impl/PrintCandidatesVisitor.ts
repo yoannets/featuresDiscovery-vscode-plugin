@@ -1,11 +1,19 @@
-class PrintCandidatesVisitor extends LatticePrettyPrinter {
+import { NodeFeatureType } from "../../graph/model/NodeFeatureType";
+import { LatticeNode } from "../../model/LatticeNode";
+import { FeatureType, FeatureTypeName } from "./FeatureDetectorVisitor";
+import {
+  JAVA_ELEMENT_PRINTER,
+  LatticePrettyPrinter,
+} from "./LatticePrettyPrinter";
+
+export class PrintCandidatesVisitor extends LatticePrettyPrinter {
   private candidateNodes: Map<LatticeNode, FeatureType>;
 
   private nodes: Node[];
 
   constructor(typedFeatureNodes: Map<LatticeNode, FeatureType>) {
     super();
-    this.printer = this.JAVA_ELEMENT_PRINTER;
+    this.printer = JAVA_ELEMENT_PRINTER;
     this.candidateNodes = typedFeatureNodes;
     this.nodes = [];
   }
