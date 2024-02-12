@@ -1,0 +1,1350 @@
+[
+  {
+    "types": [],
+    "ID": 0,
+    "children": [
+      {
+        "name": "9",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.awtui.JCustomListPanel, jreversepro.awtui.JErrorDlg, jreversepro.gui.JCustomListPanel, jreversepro.gui.JErrorDlg]",
+        "intent": "[void addComponents()]",
+        "ID": 221989075,
+        "children": [
+          {
+            "name": "64",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "extent": "[jreversepro.awtui.JCustomListPanel, jreversepro.gui.JCustomListPanel]",
+            "intent": "[void JCustomListPanel(int aMaxEntries), void addComponents()]",
+            "ID": 100965006,
+            "children": []
+          },
+          {
+            "name": "66",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "extent": "[jreversepro.awtui.JErrorDlg, jreversepro.gui.JErrorDlg]",
+            "intent": "[String getStackTrace(Exception _ex), void addComponents()]",
+            "ID": 45419232,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "17",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.awtui.JJavaDocumentEditor, jreversepro.gui.JJavaDocumentEditor]",
+        "intent": "[void JJavaDocumentEditor()]",
+        "ID": 158304301,
+        "children": []
+      },
+      {
+        "name": "18",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.revengine.JBranchTable, jreversepro.revengine.JCollatingTable]",
+        "intent": "[void sort()]",
+        "ID": 74677937,
+        "children": [
+          {
+            "name": "58",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "ID": 0,
+            "children": []
+          },
+          {
+            "name": "57",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "ID": 0,
+            "children": []
+          },
+          {
+            "name": "59",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "ID": 0,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "20",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.JAwtFrame, jreversepro.JCmdMain, jreversepro.JMainFrame]",
+        "intent": "[void main(String[] aArgs)]",
+        "ID": 154851289,
+        "children": [
+          {
+            "name": "71",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "extent": "[jreversepro.JAwtFrame, jreversepro.JMainFrame]",
+            "intent": "[void addListeners(), void appClose(), void copyText(), void cutText(), void formatTitle(String aFileName), void initAppState(), void main(String[] aArgs), void openFile(), void reverseEngineer(File aFile), void saveFile(), void saveProperties(), void showAbout(), void showFontDialog(), void viewPool()]",
+            "ID": 34562316,
+            "children": [
+              {
+                "name": "75",
+                "types": [
+                  {
+                    "FeatureTypeName": "ADHOC",
+                    "coverage": 0.0
+                  }
+                ],
+                "ID": 0,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "75",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "extent": "[jreversepro.common.AppConstants, jreversepro.common.KeyWords]",
+            "intent": "[StringBuffer writeArgs(List aArgs, JImport aImports), void JAwtFrame(), void JMainFrame(), void addListeners(), void appClose(), void copyText(), void createTree(JClassInfo aClassInfo, String aCurrentClass), void cutText(), void formatTitle(String aFileName), void initAppState(), void main(String[] aArgs), void openFile(), void reverseEngineer(File aFile), void saveFile(), void saveProperties(), void showAbout(), void showFontDialog(), void viewPool()]",
+            "ID": 88692453,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "22",
+        "types": [
+          {
+            "FeatureTypeName": "FULL_EXTENT_FULL_BEHAVIOR_EXPLICIT_CLASS_SUBCLASS_REDEFINITIONS",
+            "anchor": "jreversepro.reflect.method.JBlockObject",
+            "coverage": 0.16666667
+          }
+        ],
+        "extent": "[jreversepro.reflect.method.JBlockObject, jreversepro.reflect.method.JCaseBlock, jreversepro.reflect.method.JCatchBlock, jreversepro.reflect.method.JDoWhileBlock, jreversepro.reflect.method.JElseBlock, jreversepro.reflect.method.JElseIfBlock, jreversepro.reflect.method.JFinallyBlock, jreversepro.reflect.method.JForBlock, jreversepro.reflect.method.JIfBlock, jreversepro.reflect.method.JMethodBlock, jreversepro.reflect.method.JSwitchBlock, jreversepro.reflect.method.JSynchBlock, jreversepro.reflect.method.JTryBlock]",
+        "intent": "[String getEntryCode(), String getExitCode()]",
+        "ID": 84182584,
+        "children": []
+      },
+      {
+        "name": "24",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.reflect.JException, jreversepro.revengine.JBranchEntry]",
+        "intent": "[int getStartPc()]",
+        "ID": 78319259,
+        "children": [
+          {
+            "name": "56",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "ID": 0,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "26",
+        "types": [
+          {
+            "FeatureTypeName": "FULL_EXTENT_FULL_BEHAVIOR_EXPLICIT_INTERFACE_IMPLEMENTATIONS",
+            "anchor": "jreversepro.revengine.JReverseEngineer",
+            "coverage": 1.0
+          }
+        ],
+        "extent": "[jreversepro.revengine.JDecompiler, jreversepro.revengine.JDisAssembler, jreversepro.revengine.JReverseEngineer]",
+        "intent": "[void genCode()]",
+        "ID": 112259658,
+        "children": [
+          {
+            "name": "92",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "ID": 0,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "27",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.revengine.JBranchComparator, jreversepro.revengine.JCaseComparator]",
+        "intent": "[int compare(Object o1, Object o2)]",
+        "ID": 238614217,
+        "children": []
+      },
+      {
+        "name": "28",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.awtui.JClassEditPanel, jreversepro.gui.JClassEditPanel]",
+        "intent": "[Font getEditorFont(), void JClassEditPanel(), void setEditorFont(Font aFont), void writeCode(String aCode)]",
+        "ID": 205310017,
+        "children": []
+      },
+      {
+        "name": "31",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.reflect.JMember, jreversepro.runtime.JLocalEntry]",
+        "intent": "[String getName()]",
+        "ID": 48107362,
+        "children": []
+      },
+      {
+        "name": "32",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.reflect.JConstantPoolEntry, jreversepro.reflect.JField, jreversepro.runtime.Operand]",
+        "intent": "[String getValue()]",
+        "ID": 101870940,
+        "children": [
+          {
+            "name": "100",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "extent": "[jreversepro.reflect.JMember, jreversepro.runtime.Operand]",
+            "intent": "[String getDatatype(), String getValue()]",
+            "ID": 207446168,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "35",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.awtui.JDlgFont, jreversepro.gui.JDlgFont]",
+        "intent": "[Font getChosenFont(), int showFontDialog(), void JDlgFont(Frame owner, String title)]",
+        "ID": 214174661,
+        "children": []
+      },
+      {
+        "name": "47",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.awtui.MainMenu, jreversepro.gui.MainMenu]",
+        "intent": "[void initMenuItems(), void setFlag(String Rhs)]",
+        "ID": 162742295,
+        "children": []
+      },
+      {
+        "name": "50",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.common.JJvmOpcodes, jreversepro.revengine.JBranchEntry]",
+        "intent": "[String getOpr1(), int getTargetPc()]",
+        "ID": 7212489,
+        "children": [
+          {
+            "name": "54",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "extent": "[jreversepro.common.JJvmOpcodes, jreversepro.common.KeyWords, jreversepro.revengine.BranchConstants, jreversepro.runtime.OperandConstants]",
+            "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getOpr1(), String getOpr2(), String getStatement(), int getLastIns(), int getLastInsPos(), int getTargetPc(), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void closeCatchBranch(int closeIndex), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void setLastIns(int li), void setLastInsPos(int lip)]",
+            "ID": 226990745,
+            "children": [
+              {
+                "name": "56",
+                "types": [
+                  {
+                    "FeatureTypeName": "ADHOC",
+                    "coverage": 0.0
+                  }
+                ],
+                "extent": "[jreversepro.common.KeyWords, jreversepro.revengine.BranchConstants, jreversepro.runtime.OperandConstants]",
+                "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getComplementOperator(String rhs), String getCondition(boolean complement), String getExpression(), String getOpr1(), String getOpr2(), String getStatement(), boolean appendEndBlockStmt(JDecompiler decomp, JOperandStack jos), boolean collate(), boolean doesContain(int aPc), boolean doesStartWith(int rhsStartPc), boolean independent(), boolean isWhile(), int getEndBlockPc(), int getLastIns(), int getLastInsPos(), int getNextPc(), int getStartBlockPc(), int getStartExecPc(), int getStartPc(), int getTargetPc(), int getType(), void JBranchEntry(JMethod method, int startPc, int nextPc, int targetPc, int type, String opr1, String opr2, String operator), void JBranchEntry(JMethod method, int startPc, int targetPc, int type), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void appendStartBlockStmtX(JDecompiler decomp), void closeCatchBranch(int closeIndex), void complementOperator(), void convertToWhile(), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void resetWrittenFlag(), void rewriteCondition(JBranchEntry nextEntry, String conditionType, boolean complement), void setEndBlockPc(int aNewPc), void setLastIns(int li), void setLastInsPos(int lip), void setNextPc(int nextPc), void setOpr1(String opr1), void setOpr2(String opr2), void setStartPc(int startPc), void setTargetPc(int targetPc), void setType(int type), void setWrittenFlag(), void writeCase(boolean case1, boolean ifstat, JBranchEntry entryB)]",
+                "ID": 260865885,
+                "children": [
+                  {
+                    "name": "59",
+                    "types": [
+                      {
+                        "FeatureTypeName": "ADHOC",
+                        "coverage": 0.0
+                      }
+                    ],
+                    "extent": "[jreversepro.common.KeyWords, jreversepro.revengine.BranchConstants]",
+                    "intent": "[JBranchEntry getImmediateOuterLoop(), JCollatingTable loadBranchTable(), JOperandStack getOperandStack(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), List getEffectiveBranches(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getComplementOperator(String rhs), String getCondition(boolean complement), String getExpression(), String getOpr1(), String getOpr2(), String getStatement(), boolean appendEndBlockStmt(JDecompiler decomp, JOperandStack jos), boolean checkCase1(int a, int b), boolean checkCase2(int a, int b), boolean collate(), boolean doesContain(int aPc), boolean doesStartWith(int rhsStartPc), boolean independent(), boolean isWhile(), int convertToObjects(), int getEndBlockPc(), int getLastIns(), int getLastInsPos(), int getNextPc(), int getStartBlockPc(), int getStartExecPc(), int getStartPc(), int getTargetPc(), int getType(), void JBranchEntry(JMethod method, int startPc, int nextPc, int targetPc, int type, String opr1, String opr2, String operator), void JBranchEntry(JMethod method, int startPc, int targetPc, int type), void JCollatingTable(JMethod method), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeContext(JDecompiler decomp, JMethod meth, JRunTimeFrame rtf, JOperandStack jos, JBranchTable branches), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void addCode(int sOffset, int eOffset, int fromPos, int toPos), void addCode(int sOffset, int eOffset, int fromPos, int toPos, String type), void addConditionalBranch(JInstruction thisIns, int startPc, int type, String opr1, String opr2), void addTextCode(String txt), void appendStartBlockStmtX(JDecompiler decomp), void closeCatchBranch(int closeIndex), void collate(), void complementOperator(), void convertToWhile(), void dealIntegerStore(String popValue, int intIndex, int insIndex), void executeInstruction(JInstruction ins), void genCode(), void genSource(), void getBeginStmt(List listBranches, int insIndex, JSymbolTable symTable), void getEndStmt(int insIndex), void getFinalBlockStmt(), void identifyWhileLoops(Map mapGotos), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processBreakContinue(int startPc, int targetPc), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void pushControlEntry(JBranchEntry newent), void resetWrittenFlag(), void rewriteCondition(JBranchEntry nextEntry, String conditionType, boolean complement), void setBlockWrittenFlag(), void setEndBlockPc(int aNewPc), void setLastIns(int li), void setLastInsPos(int lip), void setNextPc(int nextPc), void setOpr1(String opr1), void setOpr2(String opr2), void setStartPc(int startPc), void setTargetPc(int targetPc), void setType(int type), void setWrittenFlag(), void sort(), void validatePairings(JBranchEntry ent), void writeCase(boolean case1, boolean ifstat, JBranchEntry entryB), void writeVariableDeclarations(JBranchEntry ent, JSymbolTable symTable)]",
+                    "ID": 217948339,
+                    "children": []
+                  },
+                  {
+                    "name": "60",
+                    "types": [
+                      {
+                        "FeatureTypeName": "ADHOC",
+                        "coverage": 0.0
+                      }
+                    ],
+                    "extent": "[jreversepro.common.KeyWords, jreversepro.runtime.OperandConstants]",
+                    "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), List getConstants(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getComplementOperator(String rhs), String getCondition(boolean complement), String getConstantValues(), String getExpression(), String getOpr1(), String getOpr2(), String getStatement(), String topDatatype(), boolean appendEndBlockStmt(JDecompiler decomp, JOperandStack jos), boolean collate(), boolean doesContain(int aPc), boolean doesStartWith(int rhsStartPc), boolean independent(), boolean isTopDatatypeForeign(), boolean isWhile(), int getEndBlockPc(), int getLastIns(), int getLastInsPos(), int getNextPc(), int getStartBlockPc(), int getStartExecPc(), int getStartPc(), int getTargetPc(), int getType(), void JBranchEntry(JMethod method, int startPc, int nextPc, int targetPc, int type, String opr1, String opr2, String operator), void JBranchEntry(JMethod method, int startPc, int targetPc, int type), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JOperandStack(), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void addConstant(String constant), void appendStartBlockStmtX(JDecompiler decomp), void closeCatchBranch(int closeIndex), void complementOperator(), void convertToWhile(), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void mergeTopTwo(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void push(String value, String datatype, int precedence), void push(int value, String datatype, int precedence), void removeAllConstants(), void resetWrittenFlag(), void rewriteCondition(JBranchEntry nextEntry, String conditionType, boolean complement), void setEndBlockPc(int aNewPc), void setLastIns(int li), void setLastInsPos(int lip), void setNextPc(int nextPc), void setOpr1(String opr1), void setOpr2(String opr2), void setStartPc(int startPc), void setTargetPc(int targetPc), void setType(int type), void setWrittenFlag(), void writeCase(boolean case1, boolean ifstat, JBranchEntry entryB)]",
+                    "ID": 211681663,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "57",
+                "types": [
+                  {
+                    "FeatureTypeName": "ADHOC",
+                    "coverage": 0.0
+                  }
+                ],
+                "extent": "[jreversepro.common.JJvmOpcodes, jreversepro.revengine.BranchConstants]",
+                "intent": "[JBranchEntry contains(List listBranchEntries, int type), JCollatingTable loadBranchTable(), JInstruction findGotoIns(List byteIns, int start, int end), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), List startsWith(int aInsIndex), Map getGotoTable(), Operand getInvokedObject(), String branchesToString(), String doesMonitorBegin(int monitorBeginPc), String getArgValues(List args, List argValues), String getOpr1(), String getOpr2(), String getStatement(), boolean isJSRTarget(int currPc), int findGotoTarget(int startPc), int getLastIns(), int getLastInsPos(), int getTargetPc(), void JBranchTable(JMethod method), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void add(JBranchEntry ent), void addCatchBranch(int insIndex, JBranchEntry brent), void addGotoEntry(int startPc, int targetPc), void addJSRPc(int targetPc), void addMonitorPc(int aMonitorPc, String aMonObject), void addRetPc(int retPc), void addSwitch(JSwitchTable switchEntry), void addTryBlocks(List excTryTable), void closeCatchBranch(int closeIndex), void dealIntegerStore(String popValue, int intIndex, int insIndex), void deleteElse(int startElse), void genCode(), void genSource(), void identifyMoreBranches(), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void setLastIns(int li), void setLastInsPos(int lip), void setTables(List aBranches), void sort()]",
+                "ID": 98910328,
+                "children": []
+              },
+              {
+                "name": "58",
+                "types": [
+                  {
+                    "FeatureTypeName": "ADHOC",
+                    "coverage": 0.0
+                  }
+                ],
+                "extent": "[jreversepro.common.JJvmOpcodes, jreversepro.common.KeyWords, jreversepro.revengine.BranchConstants]",
+                "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getOpr1(), String getOpr2(), String getStatement(), int getLastIns(), int getLastInsPos(), int getTargetPc(), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void closeCatchBranch(int closeIndex), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void setLastIns(int li), void setLastInsPos(int lip), void sort()]",
+                "ID": 218743911,
+                "children": [
+                  {
+                    "name": "57",
+                    "types": [
+                      {
+                        "FeatureTypeName": "ADHOC",
+                        "coverage": 0.0
+                      }
+                    ],
+                    "ID": 0,
+                    "children": []
+                  },
+                  {
+                    "name": "59",
+                    "types": [
+                      {
+                        "FeatureTypeName": "ADHOC",
+                        "coverage": 0.0
+                      }
+                    ],
+                    "ID": 0,
+                    "children": []
+                  },
+                  {
+                    "name": "51",
+                    "types": [
+                      {
+                        "FeatureTypeName": "ADHOC",
+                        "coverage": 0.0
+                      }
+                    ],
+                    "ID": 0,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "56",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "ID": 0,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "51",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.common.JJvmOpcodes, jreversepro.common.KeyWords]",
+        "intent": "[JBranchEntry getBranchEntry(), JCollatingTable loadBranchTable(), JInstruction next(), JInstruction prev(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), List getCases(), Operand getInvokedObject(), String disassemble(), String getArgValues(List args, List argValues), String getConditionalOperator(), String getInsName(), String getOpr1(), String getOpr2(), String getStatement(), boolean isASwitchIns(), boolean isAnIfIns(), boolean isEndOfCatch(), boolean isEndOfLine(), boolean isInvokeIns(), int getArgByte(), int getArgByte(int pos), int getArgInt(), int getArgInt(int pos), int getArgShort(), int getArgShort(int pos), int getArgUnsignedByte(), int getArgUnsignedByte(int pos), int getArgUnsignedInt(), int getArgUnsignedInt(int pos), int getArgUnsignedShort(), int getArgUnsignedShort(int pos), int getArgUnsignedWide(), int getArgUnsignedWide(int pos), int getArgWide(), int getArgWide(int pos), int getDefaultByte(), int getLastIns(), int getLastInsPos(), int getLength(), int getNextIndex(), int getOffset(), int getTargetPc(), int getTargetPc2(), int getTargetPcW(), int isStoreInstruction(), int referredVariable(), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JInstruction(int rhsIndex, int rhsOpcode, byte[] rhsArgs, boolean rhsWide), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void JSwitchTable(JMethod method, JInstruction ins, Map gotos), void JSwitchTable(JMethod method, JInstruction ins, Operand op1, Map gotos), void addCaseEntry(JCaseEntry caseEntry), void addCatchBranch(int insIndex, JBranchEntry brent), void append(JInstruction rhsNext), void closeCatchBranch(int closeIndex), void createLookupSwitch(byte[] entries, int offset, Map gotos), void createTableSwitch(byte[] entries, int offset, Map gotos), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processData(Map gotos), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void setLastIns(int li), void setLastInsPos(int lip), void setTypeValue(String rhsType, String rhsValue), void sort()]",
+        "ID": 3553871,
+        "children": []
+      },
+      {
+        "name": "60",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "ID": 0,
+        "children": []
+      },
+      {
+        "name": "59",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "ID": 0,
+        "children": []
+      },
+      {
+        "name": "50",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "ID": 0,
+        "children": []
+      },
+      {
+        "name": "54",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "ID": 0,
+        "children": []
+      },
+      {
+        "name": "51",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "ID": 0,
+        "children": []
+      },
+      {
+        "name": "56",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "ID": 0,
+        "children": []
+      },
+      {
+        "name": "54",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "ID": 0,
+        "children": []
+      },
+      {
+        "name": "92",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.common.JJvmOpcodes, jreversepro.revengine.JReverseEngineer]",
+        "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), int getLastIns(), int getLastInsPos(), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JDisAssembler(JMethod rhsMethod, JConstantPool rhsCpInfo), void addCatchBranch(int insIndex, JBranchEntry brent), void closeCatchBranch(int closeIndex), void dealDefault(StringBuffer assembly, JInstruction thisIns), void genCode(), void genSource(), void loadSymbolTable(), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void setLastIns(int li), void setLastInsPos(int lip)]",
+        "ID": 62311545,
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "9",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.awtui.JCustomListPanel, jreversepro.awtui.JErrorDlg, jreversepro.gui.JCustomListPanel, jreversepro.gui.JErrorDlg]",
+    "intent": "[void addComponents()]",
+    "ID": 221989075,
+    "children": [
+      {
+        "name": "64",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.awtui.JCustomListPanel, jreversepro.gui.JCustomListPanel]",
+        "intent": "[void JCustomListPanel(int aMaxEntries), void addComponents()]",
+        "ID": 100965006,
+        "children": []
+      },
+      {
+        "name": "66",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.awtui.JErrorDlg, jreversepro.gui.JErrorDlg]",
+        "intent": "[String getStackTrace(Exception _ex), void addComponents()]",
+        "ID": 45419232,
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "17",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.awtui.JJavaDocumentEditor, jreversepro.gui.JJavaDocumentEditor]",
+    "intent": "[void JJavaDocumentEditor()]",
+    "ID": 158304301,
+    "children": []
+  },
+  {
+    "name": "18",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.revengine.JBranchTable, jreversepro.revengine.JCollatingTable]",
+    "intent": "[void sort()]",
+    "ID": 74677937,
+    "children": [
+      {
+        "name": "58",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "ID": 0,
+        "children": []
+      },
+      {
+        "name": "57",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "ID": 0,
+        "children": []
+      },
+      {
+        "name": "59",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "ID": 0,
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "20",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.JAwtFrame, jreversepro.JCmdMain, jreversepro.JMainFrame]",
+    "intent": "[void main(String[] aArgs)]",
+    "ID": 154851289,
+    "children": [
+      {
+        "name": "71",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.JAwtFrame, jreversepro.JMainFrame]",
+        "intent": "[void addListeners(), void appClose(), void copyText(), void cutText(), void formatTitle(String aFileName), void initAppState(), void main(String[] aArgs), void openFile(), void reverseEngineer(File aFile), void saveFile(), void saveProperties(), void showAbout(), void showFontDialog(), void viewPool()]",
+        "ID": 34562316,
+        "children": [
+          {
+            "name": "75",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "ID": 0,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "75",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.common.AppConstants, jreversepro.common.KeyWords]",
+        "intent": "[StringBuffer writeArgs(List aArgs, JImport aImports), void JAwtFrame(), void JMainFrame(), void addListeners(), void appClose(), void copyText(), void createTree(JClassInfo aClassInfo, String aCurrentClass), void cutText(), void formatTitle(String aFileName), void initAppState(), void main(String[] aArgs), void openFile(), void reverseEngineer(File aFile), void saveFile(), void saveProperties(), void showAbout(), void showFontDialog(), void viewPool()]",
+        "ID": 88692453,
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "22",
+    "types": [
+      {
+        "FeatureTypeName": "FULL_EXTENT_FULL_BEHAVIOR_EXPLICIT_CLASS_SUBCLASS_REDEFINITIONS",
+        "anchor": "jreversepro.reflect.method.JBlockObject",
+        "coverage": 0.16666667
+      }
+    ],
+    "extent": "[jreversepro.reflect.method.JBlockObject, jreversepro.reflect.method.JCaseBlock, jreversepro.reflect.method.JCatchBlock, jreversepro.reflect.method.JDoWhileBlock, jreversepro.reflect.method.JElseBlock, jreversepro.reflect.method.JElseIfBlock, jreversepro.reflect.method.JFinallyBlock, jreversepro.reflect.method.JForBlock, jreversepro.reflect.method.JIfBlock, jreversepro.reflect.method.JMethodBlock, jreversepro.reflect.method.JSwitchBlock, jreversepro.reflect.method.JSynchBlock, jreversepro.reflect.method.JTryBlock]",
+    "intent": "[String getEntryCode(), String getExitCode()]",
+    "ID": 84182584,
+    "children": []
+  },
+  {
+    "name": "24",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.reflect.JException, jreversepro.revengine.JBranchEntry]",
+    "intent": "[int getStartPc()]",
+    "ID": 78319259,
+    "children": [
+      {
+        "name": "56",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "ID": 0,
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "26",
+    "types": [
+      {
+        "FeatureTypeName": "FULL_EXTENT_FULL_BEHAVIOR_EXPLICIT_INTERFACE_IMPLEMENTATIONS",
+        "anchor": "jreversepro.revengine.JReverseEngineer",
+        "coverage": 1.0
+      }
+    ],
+    "extent": "[jreversepro.revengine.JDecompiler, jreversepro.revengine.JDisAssembler, jreversepro.revengine.JReverseEngineer]",
+    "intent": "[void genCode()]",
+    "ID": 112259658,
+    "children": [
+      {
+        "name": "92",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "ID": 0,
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "27",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.revengine.JBranchComparator, jreversepro.revengine.JCaseComparator]",
+    "intent": "[int compare(Object o1, Object o2)]",
+    "ID": 238614217,
+    "children": []
+  },
+  {
+    "name": "28",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.awtui.JClassEditPanel, jreversepro.gui.JClassEditPanel]",
+    "intent": "[Font getEditorFont(), void JClassEditPanel(), void setEditorFont(Font aFont), void writeCode(String aCode)]",
+    "ID": 205310017,
+    "children": []
+  },
+  {
+    "name": "31",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.reflect.JMember, jreversepro.runtime.JLocalEntry]",
+    "intent": "[String getName()]",
+    "ID": 48107362,
+    "children": []
+  },
+  {
+    "name": "32",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.reflect.JConstantPoolEntry, jreversepro.reflect.JField, jreversepro.runtime.Operand]",
+    "intent": "[String getValue()]",
+    "ID": 101870940,
+    "children": [
+      {
+        "name": "100",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.reflect.JMember, jreversepro.runtime.Operand]",
+        "intent": "[String getDatatype(), String getValue()]",
+        "ID": 207446168,
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "35",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.awtui.JDlgFont, jreversepro.gui.JDlgFont]",
+    "intent": "[Font getChosenFont(), int showFontDialog(), void JDlgFont(Frame owner, String title)]",
+    "ID": 214174661,
+    "children": []
+  },
+  {
+    "name": "47",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.awtui.MainMenu, jreversepro.gui.MainMenu]",
+    "intent": "[void initMenuItems(), void setFlag(String Rhs)]",
+    "ID": 162742295,
+    "children": []
+  },
+  {
+    "name": "50",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.common.JJvmOpcodes, jreversepro.revengine.JBranchEntry]",
+    "intent": "[String getOpr1(), int getTargetPc()]",
+    "ID": 7212489,
+    "children": [
+      {
+        "name": "54",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.common.JJvmOpcodes, jreversepro.common.KeyWords, jreversepro.revengine.BranchConstants, jreversepro.runtime.OperandConstants]",
+        "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getOpr1(), String getOpr2(), String getStatement(), int getLastIns(), int getLastInsPos(), int getTargetPc(), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void closeCatchBranch(int closeIndex), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void setLastIns(int li), void setLastInsPos(int lip)]",
+        "ID": 226990745,
+        "children": [
+          {
+            "name": "56",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "extent": "[jreversepro.common.KeyWords, jreversepro.revengine.BranchConstants, jreversepro.runtime.OperandConstants]",
+            "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getComplementOperator(String rhs), String getCondition(boolean complement), String getExpression(), String getOpr1(), String getOpr2(), String getStatement(), boolean appendEndBlockStmt(JDecompiler decomp, JOperandStack jos), boolean collate(), boolean doesContain(int aPc), boolean doesStartWith(int rhsStartPc), boolean independent(), boolean isWhile(), int getEndBlockPc(), int getLastIns(), int getLastInsPos(), int getNextPc(), int getStartBlockPc(), int getStartExecPc(), int getStartPc(), int getTargetPc(), int getType(), void JBranchEntry(JMethod method, int startPc, int nextPc, int targetPc, int type, String opr1, String opr2, String operator), void JBranchEntry(JMethod method, int startPc, int targetPc, int type), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void appendStartBlockStmtX(JDecompiler decomp), void closeCatchBranch(int closeIndex), void complementOperator(), void convertToWhile(), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void resetWrittenFlag(), void rewriteCondition(JBranchEntry nextEntry, String conditionType, boolean complement), void setEndBlockPc(int aNewPc), void setLastIns(int li), void setLastInsPos(int lip), void setNextPc(int nextPc), void setOpr1(String opr1), void setOpr2(String opr2), void setStartPc(int startPc), void setTargetPc(int targetPc), void setType(int type), void setWrittenFlag(), void writeCase(boolean case1, boolean ifstat, JBranchEntry entryB)]",
+            "ID": 260865885,
+            "children": [
+              {
+                "name": "59",
+                "types": [
+                  {
+                    "FeatureTypeName": "ADHOC",
+                    "coverage": 0.0
+                  }
+                ],
+                "extent": "[jreversepro.common.KeyWords, jreversepro.revengine.BranchConstants]",
+                "intent": "[JBranchEntry getImmediateOuterLoop(), JCollatingTable loadBranchTable(), JOperandStack getOperandStack(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), List getEffectiveBranches(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getComplementOperator(String rhs), String getCondition(boolean complement), String getExpression(), String getOpr1(), String getOpr2(), String getStatement(), boolean appendEndBlockStmt(JDecompiler decomp, JOperandStack jos), boolean checkCase1(int a, int b), boolean checkCase2(int a, int b), boolean collate(), boolean doesContain(int aPc), boolean doesStartWith(int rhsStartPc), boolean independent(), boolean isWhile(), int convertToObjects(), int getEndBlockPc(), int getLastIns(), int getLastInsPos(), int getNextPc(), int getStartBlockPc(), int getStartExecPc(), int getStartPc(), int getTargetPc(), int getType(), void JBranchEntry(JMethod method, int startPc, int nextPc, int targetPc, int type, String opr1, String opr2, String operator), void JBranchEntry(JMethod method, int startPc, int targetPc, int type), void JCollatingTable(JMethod method), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeContext(JDecompiler decomp, JMethod meth, JRunTimeFrame rtf, JOperandStack jos, JBranchTable branches), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void addCode(int sOffset, int eOffset, int fromPos, int toPos), void addCode(int sOffset, int eOffset, int fromPos, int toPos, String type), void addConditionalBranch(JInstruction thisIns, int startPc, int type, String opr1, String opr2), void addTextCode(String txt), void appendStartBlockStmtX(JDecompiler decomp), void closeCatchBranch(int closeIndex), void collate(), void complementOperator(), void convertToWhile(), void dealIntegerStore(String popValue, int intIndex, int insIndex), void executeInstruction(JInstruction ins), void genCode(), void genSource(), void getBeginStmt(List listBranches, int insIndex, JSymbolTable symTable), void getEndStmt(int insIndex), void getFinalBlockStmt(), void identifyWhileLoops(Map mapGotos), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processBreakContinue(int startPc, int targetPc), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void pushControlEntry(JBranchEntry newent), void resetWrittenFlag(), void rewriteCondition(JBranchEntry nextEntry, String conditionType, boolean complement), void setBlockWrittenFlag(), void setEndBlockPc(int aNewPc), void setLastIns(int li), void setLastInsPos(int lip), void setNextPc(int nextPc), void setOpr1(String opr1), void setOpr2(String opr2), void setStartPc(int startPc), void setTargetPc(int targetPc), void setType(int type), void setWrittenFlag(), void sort(), void validatePairings(JBranchEntry ent), void writeCase(boolean case1, boolean ifstat, JBranchEntry entryB), void writeVariableDeclarations(JBranchEntry ent, JSymbolTable symTable)]",
+                "ID": 217948339,
+                "children": []
+              },
+              {
+                "name": "60",
+                "types": [
+                  {
+                    "FeatureTypeName": "ADHOC",
+                    "coverage": 0.0
+                  }
+                ],
+                "extent": "[jreversepro.common.KeyWords, jreversepro.runtime.OperandConstants]",
+                "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), List getConstants(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getComplementOperator(String rhs), String getCondition(boolean complement), String getConstantValues(), String getExpression(), String getOpr1(), String getOpr2(), String getStatement(), String topDatatype(), boolean appendEndBlockStmt(JDecompiler decomp, JOperandStack jos), boolean collate(), boolean doesContain(int aPc), boolean doesStartWith(int rhsStartPc), boolean independent(), boolean isTopDatatypeForeign(), boolean isWhile(), int getEndBlockPc(), int getLastIns(), int getLastInsPos(), int getNextPc(), int getStartBlockPc(), int getStartExecPc(), int getStartPc(), int getTargetPc(), int getType(), void JBranchEntry(JMethod method, int startPc, int nextPc, int targetPc, int type, String opr1, String opr2, String operator), void JBranchEntry(JMethod method, int startPc, int targetPc, int type), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JOperandStack(), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void addConstant(String constant), void appendStartBlockStmtX(JDecompiler decomp), void closeCatchBranch(int closeIndex), void complementOperator(), void convertToWhile(), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void mergeTopTwo(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void push(String value, String datatype, int precedence), void push(int value, String datatype, int precedence), void removeAllConstants(), void resetWrittenFlag(), void rewriteCondition(JBranchEntry nextEntry, String conditionType, boolean complement), void setEndBlockPc(int aNewPc), void setLastIns(int li), void setLastInsPos(int lip), void setNextPc(int nextPc), void setOpr1(String opr1), void setOpr2(String opr2), void setStartPc(int startPc), void setTargetPc(int targetPc), void setType(int type), void setWrittenFlag(), void writeCase(boolean case1, boolean ifstat, JBranchEntry entryB)]",
+                "ID": 211681663,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "57",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "extent": "[jreversepro.common.JJvmOpcodes, jreversepro.revengine.BranchConstants]",
+            "intent": "[JBranchEntry contains(List listBranchEntries, int type), JCollatingTable loadBranchTable(), JInstruction findGotoIns(List byteIns, int start, int end), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), List startsWith(int aInsIndex), Map getGotoTable(), Operand getInvokedObject(), String branchesToString(), String doesMonitorBegin(int monitorBeginPc), String getArgValues(List args, List argValues), String getOpr1(), String getOpr2(), String getStatement(), boolean isJSRTarget(int currPc), int findGotoTarget(int startPc), int getLastIns(), int getLastInsPos(), int getTargetPc(), void JBranchTable(JMethod method), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void add(JBranchEntry ent), void addCatchBranch(int insIndex, JBranchEntry brent), void addGotoEntry(int startPc, int targetPc), void addJSRPc(int targetPc), void addMonitorPc(int aMonitorPc, String aMonObject), void addRetPc(int retPc), void addSwitch(JSwitchTable switchEntry), void addTryBlocks(List excTryTable), void closeCatchBranch(int closeIndex), void dealIntegerStore(String popValue, int intIndex, int insIndex), void deleteElse(int startElse), void genCode(), void genSource(), void identifyMoreBranches(), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void setLastIns(int li), void setLastInsPos(int lip), void setTables(List aBranches), void sort()]",
+            "ID": 98910328,
+            "children": []
+          },
+          {
+            "name": "58",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "extent": "[jreversepro.common.JJvmOpcodes, jreversepro.common.KeyWords, jreversepro.revengine.BranchConstants]",
+            "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getOpr1(), String getOpr2(), String getStatement(), int getLastIns(), int getLastInsPos(), int getTargetPc(), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void closeCatchBranch(int closeIndex), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void setLastIns(int li), void setLastInsPos(int lip), void sort()]",
+            "ID": 218743911,
+            "children": [
+              {
+                "name": "57",
+                "types": [
+                  {
+                    "FeatureTypeName": "ADHOC",
+                    "coverage": 0.0
+                  }
+                ],
+                "ID": 0,
+                "children": []
+              },
+              {
+                "name": "59",
+                "types": [
+                  {
+                    "FeatureTypeName": "ADHOC",
+                    "coverage": 0.0
+                  }
+                ],
+                "ID": 0,
+                "children": []
+              },
+              {
+                "name": "51",
+                "types": [
+                  {
+                    "FeatureTypeName": "ADHOC",
+                    "coverage": 0.0
+                  }
+                ],
+                "ID": 0,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "56",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "ID": 0,
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "51",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.common.JJvmOpcodes, jreversepro.common.KeyWords]",
+    "intent": "[JBranchEntry getBranchEntry(), JCollatingTable loadBranchTable(), JInstruction next(), JInstruction prev(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), List getCases(), Operand getInvokedObject(), String disassemble(), String getArgValues(List args, List argValues), String getConditionalOperator(), String getInsName(), String getOpr1(), String getOpr2(), String getStatement(), boolean isASwitchIns(), boolean isAnIfIns(), boolean isEndOfCatch(), boolean isEndOfLine(), boolean isInvokeIns(), int getArgByte(), int getArgByte(int pos), int getArgInt(), int getArgInt(int pos), int getArgShort(), int getArgShort(int pos), int getArgUnsignedByte(), int getArgUnsignedByte(int pos), int getArgUnsignedInt(), int getArgUnsignedInt(int pos), int getArgUnsignedShort(), int getArgUnsignedShort(int pos), int getArgUnsignedWide(), int getArgUnsignedWide(int pos), int getArgWide(), int getArgWide(int pos), int getDefaultByte(), int getLastIns(), int getLastInsPos(), int getLength(), int getNextIndex(), int getOffset(), int getTargetPc(), int getTargetPc2(), int getTargetPcW(), int isStoreInstruction(), int referredVariable(), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JInstruction(int rhsIndex, int rhsOpcode, byte[] rhsArgs, boolean rhsWide), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void JSwitchTable(JMethod method, JInstruction ins, Map gotos), void JSwitchTable(JMethod method, JInstruction ins, Operand op1, Map gotos), void addCaseEntry(JCaseEntry caseEntry), void addCatchBranch(int insIndex, JBranchEntry brent), void append(JInstruction rhsNext), void closeCatchBranch(int closeIndex), void createLookupSwitch(byte[] entries, int offset, Map gotos), void createTableSwitch(byte[] entries, int offset, Map gotos), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processData(Map gotos), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void setLastIns(int li), void setLastInsPos(int lip), void setTypeValue(String rhsType, String rhsValue), void sort()]",
+    "ID": 3553871,
+    "children": []
+  },
+  {
+    "name": "54",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.common.JJvmOpcodes, jreversepro.common.KeyWords, jreversepro.revengine.BranchConstants, jreversepro.runtime.OperandConstants]",
+    "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getOpr1(), String getOpr2(), String getStatement(), int getLastIns(), int getLastInsPos(), int getTargetPc(), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void closeCatchBranch(int closeIndex), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void setLastIns(int li), void setLastInsPos(int lip)]",
+    "ID": 226990745,
+    "children": [
+      {
+        "name": "56",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.common.KeyWords, jreversepro.revengine.BranchConstants, jreversepro.runtime.OperandConstants]",
+        "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getComplementOperator(String rhs), String getCondition(boolean complement), String getExpression(), String getOpr1(), String getOpr2(), String getStatement(), boolean appendEndBlockStmt(JDecompiler decomp, JOperandStack jos), boolean collate(), boolean doesContain(int aPc), boolean doesStartWith(int rhsStartPc), boolean independent(), boolean isWhile(), int getEndBlockPc(), int getLastIns(), int getLastInsPos(), int getNextPc(), int getStartBlockPc(), int getStartExecPc(), int getStartPc(), int getTargetPc(), int getType(), void JBranchEntry(JMethod method, int startPc, int nextPc, int targetPc, int type, String opr1, String opr2, String operator), void JBranchEntry(JMethod method, int startPc, int targetPc, int type), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void appendStartBlockStmtX(JDecompiler decomp), void closeCatchBranch(int closeIndex), void complementOperator(), void convertToWhile(), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void resetWrittenFlag(), void rewriteCondition(JBranchEntry nextEntry, String conditionType, boolean complement), void setEndBlockPc(int aNewPc), void setLastIns(int li), void setLastInsPos(int lip), void setNextPc(int nextPc), void setOpr1(String opr1), void setOpr2(String opr2), void setStartPc(int startPc), void setTargetPc(int targetPc), void setType(int type), void setWrittenFlag(), void writeCase(boolean case1, boolean ifstat, JBranchEntry entryB)]",
+        "ID": 260865885,
+        "children": [
+          {
+            "name": "59",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "extent": "[jreversepro.common.KeyWords, jreversepro.revengine.BranchConstants]",
+            "intent": "[JBranchEntry getImmediateOuterLoop(), JCollatingTable loadBranchTable(), JOperandStack getOperandStack(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), List getEffectiveBranches(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getComplementOperator(String rhs), String getCondition(boolean complement), String getExpression(), String getOpr1(), String getOpr2(), String getStatement(), boolean appendEndBlockStmt(JDecompiler decomp, JOperandStack jos), boolean checkCase1(int a, int b), boolean checkCase2(int a, int b), boolean collate(), boolean doesContain(int aPc), boolean doesStartWith(int rhsStartPc), boolean independent(), boolean isWhile(), int convertToObjects(), int getEndBlockPc(), int getLastIns(), int getLastInsPos(), int getNextPc(), int getStartBlockPc(), int getStartExecPc(), int getStartPc(), int getTargetPc(), int getType(), void JBranchEntry(JMethod method, int startPc, int nextPc, int targetPc, int type, String opr1, String opr2, String operator), void JBranchEntry(JMethod method, int startPc, int targetPc, int type), void JCollatingTable(JMethod method), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeContext(JDecompiler decomp, JMethod meth, JRunTimeFrame rtf, JOperandStack jos, JBranchTable branches), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void addCode(int sOffset, int eOffset, int fromPos, int toPos), void addCode(int sOffset, int eOffset, int fromPos, int toPos, String type), void addConditionalBranch(JInstruction thisIns, int startPc, int type, String opr1, String opr2), void addTextCode(String txt), void appendStartBlockStmtX(JDecompiler decomp), void closeCatchBranch(int closeIndex), void collate(), void complementOperator(), void convertToWhile(), void dealIntegerStore(String popValue, int intIndex, int insIndex), void executeInstruction(JInstruction ins), void genCode(), void genSource(), void getBeginStmt(List listBranches, int insIndex, JSymbolTable symTable), void getEndStmt(int insIndex), void getFinalBlockStmt(), void identifyWhileLoops(Map mapGotos), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processBreakContinue(int startPc, int targetPc), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void pushControlEntry(JBranchEntry newent), void resetWrittenFlag(), void rewriteCondition(JBranchEntry nextEntry, String conditionType, boolean complement), void setBlockWrittenFlag(), void setEndBlockPc(int aNewPc), void setLastIns(int li), void setLastInsPos(int lip), void setNextPc(int nextPc), void setOpr1(String opr1), void setOpr2(String opr2), void setStartPc(int startPc), void setTargetPc(int targetPc), void setType(int type), void setWrittenFlag(), void sort(), void validatePairings(JBranchEntry ent), void writeCase(boolean case1, boolean ifstat, JBranchEntry entryB), void writeVariableDeclarations(JBranchEntry ent, JSymbolTable symTable)]",
+            "ID": 217948339,
+            "children": []
+          },
+          {
+            "name": "60",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "extent": "[jreversepro.common.KeyWords, jreversepro.runtime.OperandConstants]",
+            "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), List getConstants(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getComplementOperator(String rhs), String getCondition(boolean complement), String getConstantValues(), String getExpression(), String getOpr1(), String getOpr2(), String getStatement(), String topDatatype(), boolean appendEndBlockStmt(JDecompiler decomp, JOperandStack jos), boolean collate(), boolean doesContain(int aPc), boolean doesStartWith(int rhsStartPc), boolean independent(), boolean isTopDatatypeForeign(), boolean isWhile(), int getEndBlockPc(), int getLastIns(), int getLastInsPos(), int getNextPc(), int getStartBlockPc(), int getStartExecPc(), int getStartPc(), int getTargetPc(), int getType(), void JBranchEntry(JMethod method, int startPc, int nextPc, int targetPc, int type, String opr1, String opr2, String operator), void JBranchEntry(JMethod method, int startPc, int targetPc, int type), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JOperandStack(), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void addConstant(String constant), void appendStartBlockStmtX(JDecompiler decomp), void closeCatchBranch(int closeIndex), void complementOperator(), void convertToWhile(), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void mergeTopTwo(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void push(String value, String datatype, int precedence), void push(int value, String datatype, int precedence), void removeAllConstants(), void resetWrittenFlag(), void rewriteCondition(JBranchEntry nextEntry, String conditionType, boolean complement), void setEndBlockPc(int aNewPc), void setLastIns(int li), void setLastInsPos(int lip), void setNextPc(int nextPc), void setOpr1(String opr1), void setOpr2(String opr2), void setStartPc(int startPc), void setTargetPc(int targetPc), void setType(int type), void setWrittenFlag(), void writeCase(boolean case1, boolean ifstat, JBranchEntry entryB)]",
+            "ID": 211681663,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "57",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.common.JJvmOpcodes, jreversepro.revengine.BranchConstants]",
+        "intent": "[JBranchEntry contains(List listBranchEntries, int type), JCollatingTable loadBranchTable(), JInstruction findGotoIns(List byteIns, int start, int end), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), List startsWith(int aInsIndex), Map getGotoTable(), Operand getInvokedObject(), String branchesToString(), String doesMonitorBegin(int monitorBeginPc), String getArgValues(List args, List argValues), String getOpr1(), String getOpr2(), String getStatement(), boolean isJSRTarget(int currPc), int findGotoTarget(int startPc), int getLastIns(), int getLastInsPos(), int getTargetPc(), void JBranchTable(JMethod method), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void add(JBranchEntry ent), void addCatchBranch(int insIndex, JBranchEntry brent), void addGotoEntry(int startPc, int targetPc), void addJSRPc(int targetPc), void addMonitorPc(int aMonitorPc, String aMonObject), void addRetPc(int retPc), void addSwitch(JSwitchTable switchEntry), void addTryBlocks(List excTryTable), void closeCatchBranch(int closeIndex), void dealIntegerStore(String popValue, int intIndex, int insIndex), void deleteElse(int startElse), void genCode(), void genSource(), void identifyMoreBranches(), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void setLastIns(int li), void setLastInsPos(int lip), void setTables(List aBranches), void sort()]",
+        "ID": 98910328,
+        "children": []
+      },
+      {
+        "name": "58",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.common.JJvmOpcodes, jreversepro.common.KeyWords, jreversepro.revengine.BranchConstants]",
+        "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getOpr1(), String getOpr2(), String getStatement(), int getLastIns(), int getLastInsPos(), int getTargetPc(), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void closeCatchBranch(int closeIndex), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void setLastIns(int li), void setLastInsPos(int lip), void sort()]",
+        "ID": 218743911,
+        "children": [
+          {
+            "name": "57",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "ID": 0,
+            "children": []
+          },
+          {
+            "name": "59",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "ID": 0,
+            "children": []
+          },
+          {
+            "name": "51",
+            "types": [
+              {
+                "FeatureTypeName": "ADHOC",
+                "coverage": 0.0
+              }
+            ],
+            "ID": 0,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "56",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.common.KeyWords, jreversepro.revengine.BranchConstants, jreversepro.runtime.OperandConstants]",
+    "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getComplementOperator(String rhs), String getCondition(boolean complement), String getExpression(), String getOpr1(), String getOpr2(), String getStatement(), boolean appendEndBlockStmt(JDecompiler decomp, JOperandStack jos), boolean collate(), boolean doesContain(int aPc), boolean doesStartWith(int rhsStartPc), boolean independent(), boolean isWhile(), int getEndBlockPc(), int getLastIns(), int getLastInsPos(), int getNextPc(), int getStartBlockPc(), int getStartExecPc(), int getStartPc(), int getTargetPc(), int getType(), void JBranchEntry(JMethod method, int startPc, int nextPc, int targetPc, int type, String opr1, String opr2, String operator), void JBranchEntry(JMethod method, int startPc, int targetPc, int type), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void appendStartBlockStmtX(JDecompiler decomp), void closeCatchBranch(int closeIndex), void complementOperator(), void convertToWhile(), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void resetWrittenFlag(), void rewriteCondition(JBranchEntry nextEntry, String conditionType, boolean complement), void setEndBlockPc(int aNewPc), void setLastIns(int li), void setLastInsPos(int lip), void setNextPc(int nextPc), void setOpr1(String opr1), void setOpr2(String opr2), void setStartPc(int startPc), void setTargetPc(int targetPc), void setType(int type), void setWrittenFlag(), void writeCase(boolean case1, boolean ifstat, JBranchEntry entryB)]",
+    "ID": 260865885,
+    "children": [
+      {
+        "name": "59",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.common.KeyWords, jreversepro.revengine.BranchConstants]",
+        "intent": "[JBranchEntry getImmediateOuterLoop(), JCollatingTable loadBranchTable(), JOperandStack getOperandStack(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), List getEffectiveBranches(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getComplementOperator(String rhs), String getCondition(boolean complement), String getExpression(), String getOpr1(), String getOpr2(), String getStatement(), boolean appendEndBlockStmt(JDecompiler decomp, JOperandStack jos), boolean checkCase1(int a, int b), boolean checkCase2(int a, int b), boolean collate(), boolean doesContain(int aPc), boolean doesStartWith(int rhsStartPc), boolean independent(), boolean isWhile(), int convertToObjects(), int getEndBlockPc(), int getLastIns(), int getLastInsPos(), int getNextPc(), int getStartBlockPc(), int getStartExecPc(), int getStartPc(), int getTargetPc(), int getType(), void JBranchEntry(JMethod method, int startPc, int nextPc, int targetPc, int type, String opr1, String opr2, String operator), void JBranchEntry(JMethod method, int startPc, int targetPc, int type), void JCollatingTable(JMethod method), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeContext(JDecompiler decomp, JMethod meth, JRunTimeFrame rtf, JOperandStack jos, JBranchTable branches), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void addCode(int sOffset, int eOffset, int fromPos, int toPos), void addCode(int sOffset, int eOffset, int fromPos, int toPos, String type), void addConditionalBranch(JInstruction thisIns, int startPc, int type, String opr1, String opr2), void addTextCode(String txt), void appendStartBlockStmtX(JDecompiler decomp), void closeCatchBranch(int closeIndex), void collate(), void complementOperator(), void convertToWhile(), void dealIntegerStore(String popValue, int intIndex, int insIndex), void executeInstruction(JInstruction ins), void genCode(), void genSource(), void getBeginStmt(List listBranches, int insIndex, JSymbolTable symTable), void getEndStmt(int insIndex), void getFinalBlockStmt(), void identifyWhileLoops(Map mapGotos), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processBreakContinue(int startPc, int targetPc), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void pushControlEntry(JBranchEntry newent), void resetWrittenFlag(), void rewriteCondition(JBranchEntry nextEntry, String conditionType, boolean complement), void setBlockWrittenFlag(), void setEndBlockPc(int aNewPc), void setLastIns(int li), void setLastInsPos(int lip), void setNextPc(int nextPc), void setOpr1(String opr1), void setOpr2(String opr2), void setStartPc(int startPc), void setTargetPc(int targetPc), void setType(int type), void setWrittenFlag(), void sort(), void validatePairings(JBranchEntry ent), void writeCase(boolean case1, boolean ifstat, JBranchEntry entryB), void writeVariableDeclarations(JBranchEntry ent, JSymbolTable symTable)]",
+        "ID": 217948339,
+        "children": []
+      },
+      {
+        "name": "60",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[jreversepro.common.KeyWords, jreversepro.runtime.OperandConstants]",
+        "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), List getConstants(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getComplementOperator(String rhs), String getCondition(boolean complement), String getConstantValues(), String getExpression(), String getOpr1(), String getOpr2(), String getStatement(), String topDatatype(), boolean appendEndBlockStmt(JDecompiler decomp, JOperandStack jos), boolean collate(), boolean doesContain(int aPc), boolean doesStartWith(int rhsStartPc), boolean independent(), boolean isTopDatatypeForeign(), boolean isWhile(), int getEndBlockPc(), int getLastIns(), int getLastInsPos(), int getNextPc(), int getStartBlockPc(), int getStartExecPc(), int getStartPc(), int getTargetPc(), int getType(), void JBranchEntry(JMethod method, int startPc, int nextPc, int targetPc, int type, String opr1, String opr2, String operator), void JBranchEntry(JMethod method, int startPc, int targetPc, int type), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JOperandStack(), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void addConstant(String constant), void appendStartBlockStmtX(JDecompiler decomp), void closeCatchBranch(int closeIndex), void complementOperator(), void convertToWhile(), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void mergeTopTwo(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void push(String value, String datatype, int precedence), void push(int value, String datatype, int precedence), void removeAllConstants(), void resetWrittenFlag(), void rewriteCondition(JBranchEntry nextEntry, String conditionType, boolean complement), void setEndBlockPc(int aNewPc), void setLastIns(int li), void setLastInsPos(int lip), void setNextPc(int nextPc), void setOpr1(String opr1), void setOpr2(String opr2), void setStartPc(int startPc), void setTargetPc(int targetPc), void setType(int type), void setWrittenFlag(), void writeCase(boolean case1, boolean ifstat, JBranchEntry entryB)]",
+        "ID": 211681663,
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "57",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.common.JJvmOpcodes, jreversepro.revengine.BranchConstants]",
+    "intent": "[JBranchEntry contains(List listBranchEntries, int type), JCollatingTable loadBranchTable(), JInstruction findGotoIns(List byteIns, int start, int end), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), List startsWith(int aInsIndex), Map getGotoTable(), Operand getInvokedObject(), String branchesToString(), String doesMonitorBegin(int monitorBeginPc), String getArgValues(List args, List argValues), String getOpr1(), String getOpr2(), String getStatement(), boolean isJSRTarget(int currPc), int findGotoTarget(int startPc), int getLastIns(), int getLastInsPos(), int getTargetPc(), void JBranchTable(JMethod method), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void add(JBranchEntry ent), void addCatchBranch(int insIndex, JBranchEntry brent), void addGotoEntry(int startPc, int targetPc), void addJSRPc(int targetPc), void addMonitorPc(int aMonitorPc, String aMonObject), void addRetPc(int retPc), void addSwitch(JSwitchTable switchEntry), void addTryBlocks(List excTryTable), void closeCatchBranch(int closeIndex), void dealIntegerStore(String popValue, int intIndex, int insIndex), void deleteElse(int startElse), void genCode(), void genSource(), void identifyMoreBranches(), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void setLastIns(int li), void setLastInsPos(int lip), void setTables(List aBranches), void sort()]",
+    "ID": 98910328,
+    "children": []
+  },
+  {
+    "name": "58",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.common.JJvmOpcodes, jreversepro.common.KeyWords, jreversepro.revengine.BranchConstants]",
+    "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getOpr1(), String getOpr2(), String getStatement(), int getLastIns(), int getLastInsPos(), int getTargetPc(), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void closeCatchBranch(int closeIndex), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void setLastIns(int li), void setLastInsPos(int lip), void sort()]",
+    "ID": 218743911,
+    "children": [
+      {
+        "name": "57",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "ID": 0,
+        "children": []
+      },
+      {
+        "name": "59",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "ID": 0,
+        "children": []
+      },
+      {
+        "name": "51",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "ID": 0,
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "59",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.common.KeyWords, jreversepro.revengine.BranchConstants]",
+    "intent": "[JBranchEntry getImmediateOuterLoop(), JCollatingTable loadBranchTable(), JOperandStack getOperandStack(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), List getEffectiveBranches(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getComplementOperator(String rhs), String getCondition(boolean complement), String getExpression(), String getOpr1(), String getOpr2(), String getStatement(), boolean appendEndBlockStmt(JDecompiler decomp, JOperandStack jos), boolean checkCase1(int a, int b), boolean checkCase2(int a, int b), boolean collate(), boolean doesContain(int aPc), boolean doesStartWith(int rhsStartPc), boolean independent(), boolean isWhile(), int convertToObjects(), int getEndBlockPc(), int getLastIns(), int getLastInsPos(), int getNextPc(), int getStartBlockPc(), int getStartExecPc(), int getStartPc(), int getTargetPc(), int getType(), void JBranchEntry(JMethod method, int startPc, int nextPc, int targetPc, int type, String opr1, String opr2, String operator), void JBranchEntry(JMethod method, int startPc, int targetPc, int type), void JCollatingTable(JMethod method), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JRunTimeContext(JDecompiler decomp, JMethod meth, JRunTimeFrame rtf, JOperandStack jos, JBranchTable branches), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void addCode(int sOffset, int eOffset, int fromPos, int toPos), void addCode(int sOffset, int eOffset, int fromPos, int toPos, String type), void addConditionalBranch(JInstruction thisIns, int startPc, int type, String opr1, String opr2), void addTextCode(String txt), void appendStartBlockStmtX(JDecompiler decomp), void closeCatchBranch(int closeIndex), void collate(), void complementOperator(), void convertToWhile(), void dealIntegerStore(String popValue, int intIndex, int insIndex), void executeInstruction(JInstruction ins), void genCode(), void genSource(), void getBeginStmt(List listBranches, int insIndex, JSymbolTable symTable), void getEndStmt(int insIndex), void getFinalBlockStmt(), void identifyWhileLoops(Map mapGotos), void loadSymbolTable(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processBreakContinue(int startPc, int targetPc), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void pushControlEntry(JBranchEntry newent), void resetWrittenFlag(), void rewriteCondition(JBranchEntry nextEntry, String conditionType, boolean complement), void setBlockWrittenFlag(), void setEndBlockPc(int aNewPc), void setLastIns(int li), void setLastInsPos(int lip), void setNextPc(int nextPc), void setOpr1(String opr1), void setOpr2(String opr2), void setStartPc(int startPc), void setTargetPc(int targetPc), void setType(int type), void setWrittenFlag(), void sort(), void validatePairings(JBranchEntry ent), void writeCase(boolean case1, boolean ifstat, JBranchEntry entryB), void writeVariableDeclarations(JBranchEntry ent, JSymbolTable symTable)]",
+    "ID": 217948339,
+    "children": []
+  },
+  {
+    "name": "60",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.common.KeyWords, jreversepro.runtime.OperandConstants]",
+    "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), List getConstants(), Operand getInvokedObject(), String getArgValues(List args, List argValues), String getComplementOperator(String rhs), String getCondition(boolean complement), String getConstantValues(), String getExpression(), String getOpr1(), String getOpr2(), String getStatement(), String topDatatype(), boolean appendEndBlockStmt(JDecompiler decomp, JOperandStack jos), boolean collate(), boolean doesContain(int aPc), boolean doesStartWith(int rhsStartPc), boolean independent(), boolean isTopDatatypeForeign(), boolean isWhile(), int getEndBlockPc(), int getLastIns(), int getLastInsPos(), int getNextPc(), int getStartBlockPc(), int getStartExecPc(), int getStartPc(), int getTargetPc(), int getType(), void JBranchEntry(JMethod method, int startPc, int nextPc, int targetPc, int type, String opr1, String opr2, String operator), void JBranchEntry(JMethod method, int startPc, int targetPc, int type), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JOperandStack(), void JRunTimeFrame(JConstantPool rhsCpInfo, JSymbolTable rhsSymTable, String rhsReturnType), void addCatchBranch(int insIndex, JBranchEntry brent), void addConstant(String constant), void appendStartBlockStmtX(JDecompiler decomp), void closeCatchBranch(int closeIndex), void complementOperator(), void convertToWhile(), void dealIntegerStore(String popValue, int intIndex, int insIndex), void genCode(), void genSource(), void loadSymbolTable(), void mergeTopTwo(), void operateStack(JInstruction thisIns, JOperandStack myStack), void opr0to31(JInstruction thisIns, JOperandStack myStack), void opr101to127(JInstruction thisIns, JOperandStack myStack), void opr128to147(JInstruction thisIns, JOperandStack myStack), void opr148to171(JInstruction thisIns, JOperandStack myStack), void opr172to186(JInstruction thisIns, JOperandStack myStack), void opr187to201(JInstruction thisIns, JOperandStack myStack), void opr202to255(JInstruction thisIns, JOperandStack myStack), void opr32to53(JInstruction thisIns, JOperandStack myStack), void opr54to86(JInstruction thisIns, JOperandStack myStack), void opr87to100(JInstruction thisIns, JOperandStack myStack), void processInvokeInstruction(JInstruction aCurIns, JOperandStack aJos, boolean aInvokeSpecialFlag), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void push(String value, String datatype, int precedence), void push(int value, String datatype, int precedence), void removeAllConstants(), void resetWrittenFlag(), void rewriteCondition(JBranchEntry nextEntry, String conditionType, boolean complement), void setEndBlockPc(int aNewPc), void setLastIns(int li), void setLastInsPos(int lip), void setNextPc(int nextPc), void setOpr1(String opr1), void setOpr2(String opr2), void setStartPc(int startPc), void setTargetPc(int targetPc), void setType(int type), void setWrittenFlag(), void writeCase(boolean case1, boolean ifstat, JBranchEntry entryB)]",
+    "ID": 211681663,
+    "children": []
+  },
+  {
+    "name": "64",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.awtui.JCustomListPanel, jreversepro.gui.JCustomListPanel]",
+    "intent": "[void JCustomListPanel(int aMaxEntries), void addComponents()]",
+    "ID": 100965006,
+    "children": []
+  },
+  {
+    "name": "66",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.awtui.JErrorDlg, jreversepro.gui.JErrorDlg]",
+    "intent": "[String getStackTrace(Exception _ex), void addComponents()]",
+    "ID": 45419232,
+    "children": []
+  },
+  {
+    "name": "71",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.JAwtFrame, jreversepro.JMainFrame]",
+    "intent": "[void addListeners(), void appClose(), void copyText(), void cutText(), void formatTitle(String aFileName), void initAppState(), void main(String[] aArgs), void openFile(), void reverseEngineer(File aFile), void saveFile(), void saveProperties(), void showAbout(), void showFontDialog(), void viewPool()]",
+    "ID": 34562316,
+    "children": [
+      {
+        "name": "75",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "ID": 0,
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "75",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.common.AppConstants, jreversepro.common.KeyWords]",
+    "intent": "[StringBuffer writeArgs(List aArgs, JImport aImports), void JAwtFrame(), void JMainFrame(), void addListeners(), void appClose(), void copyText(), void createTree(JClassInfo aClassInfo, String aCurrentClass), void cutText(), void formatTitle(String aFileName), void initAppState(), void main(String[] aArgs), void openFile(), void reverseEngineer(File aFile), void saveFile(), void saveProperties(), void showAbout(), void showFontDialog(), void viewPool()]",
+    "ID": 88692453,
+    "children": []
+  },
+  {
+    "name": "92",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.common.JJvmOpcodes, jreversepro.revengine.JReverseEngineer]",
+    "intent": "[JCollatingTable loadBranchTable(), JRunTimeContext createRuntimeContext(), JSymbolTable getSymbolTable(), int getLastIns(), int getLastInsPos(), void JDecompiler(JMethod rhsMethod, JConstantPool rhsCpInfo), void JDisAssembler(JMethod rhsMethod, JConstantPool rhsCpInfo), void addCatchBranch(int insIndex, JBranchEntry brent), void closeCatchBranch(int closeIndex), void dealDefault(StringBuffer assembly, JInstruction thisIns), void genCode(), void genSource(), void loadSymbolTable(), void processJVMInstruction(JInstruction ins, JRunTimeContext context), void setLastIns(int li), void setLastInsPos(int lip)]",
+    "ID": 62311545,
+    "children": []
+  },
+  {
+    "name": "100",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[jreversepro.reflect.JMember, jreversepro.runtime.Operand]",
+    "intent": "[String getDatatype(), String getValue()]",
+    "ID": 207446168,
+    "children": []
+  }
+]

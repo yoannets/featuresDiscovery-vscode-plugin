@@ -1,9 +1,31 @@
 {
   "name": "featuresdiscovery-vscode-plugin",
+  "displayName": "features-discovery",
   "version": "1.0.0",
   "description": "Features discovery plugin translation for vscode extension",
-  "main": "./dist/index.js",
+  "main": "./dist/extension.js",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.featureDiscovery",
+        "title": "Feature discovery generate graph"
+      }
+    ],
+    "views": {
+      "webview": [
+        {
+          "id": "graph",
+          "name": "Graph View",
+          "iconPath": "./assets/icon.png"
+        }
+      ]
+    }
+  },
   "scripts": {
+    "vscode:prepublish": "npm run build",
     "build": "tsc",
     "test": "jest --colors"
   },
