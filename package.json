@@ -14,12 +14,22 @@
         "title": "Feature discovery generate graph"
       }
     ],
-    "views": {
-      "webview": [
+    "viewsContainers": {
+      "activitybar": [
         {
-          "id": "graph",
-          "name": "Graph View",
-          "iconPath": "./assets/icon.png"
+          "id": "featureDiscovery-sidebar-view",
+          "title": "Feature Discovery Actions",
+          "icon": "assets/icon.png"
+        }
+      ]
+    },
+    "views": {
+      "featureDiscovery-sidebar-view": [
+        {
+          "type": "webview",
+          "id": "featureDiscovery-sidebar",
+          "name": "Feature Discovery Actions",
+          "icon": "assets/icon.png"
         }
       ]
     }
@@ -40,6 +50,7 @@
   },
   "homepage": "https://github.com/yoannets/featuresDiscovery-vscode-plugin#readme",
   "devDependencies": {
+    "@types/ejs": "^3.1.5",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.16",
     "@types/vscode": "^1.86.0",
@@ -47,5 +58,8 @@
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "ejs": "^3.1.9"
   }
 }

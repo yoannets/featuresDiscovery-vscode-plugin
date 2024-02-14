@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--
+					Use a content security policy to only allow loading images from https or from our extension directory,
+					and only allow scripts that have a specific nonce.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="img-src https: data:; style-src 'unsafe-inline' <%= webview.cspSource %>; script-src 'nonce-<%= nonce %>';"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="<%= styleResetUri %>" rel="stylesheet" />
+    <link href="<%= styleVSCodeUri %>" rel="stylesheet" />
+    <script nonce="<%= nonce %>">
+      const vscode = acquireVsCodeApi();
+    </script>
+  </head>
+  <body>
+    <input
+      id="open-graph"
+      type="file"
+      style="display: none"
+      accept="application/JSON"
+    />
+
+    <button id="btn-file">Open Graph File</button>
+    <button>Analyse Code</button>
+  </body>
+  <script nonce="<%= nonce %>">
+    const btnFile = document.querySelector("#btn-file");
+    const fileInput = document.querySelector("#open-graph");
+
+    btnFile.addEventListener("click", () => fileInput.click());
+    fileInput.addEventListener("change", (event) => {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+
+      reader.onload = (e) => {
+        try {
+          const json = JSON.parse(e.target.result);
+          vscode.postMessage({ type: "load-graph", value: json });
+        } catch (error) {
+          vscode.postMessage({ type: "error", value: error.message });
+        }
+      };
+
+      reader.readAsText(file);
+    });
+  </script>
+</html>

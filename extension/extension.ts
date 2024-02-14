@@ -1,23 +1,21 @@
 import * as vscode from "vscode";
-import path from "path";
-import fs from "fs";
+import SidebarProvider from "./SidebarProvider";
+import createGraphView from "./createGraphView";
 
 export function activate(context: vscode.ExtensionContext) {
-  // Command to show the webview
-  let disposable = vscode.commands.registerCommand(
+  // Graph View command
+  const graphViewCommand = vscode.commands.registerCommand(
     "extension.featureDiscovery",
-    () => {
-      const panel = vscode.window.createWebviewPanel(
-        "graph",
-        "Graph View",
-        vscode.ViewColumn.One,
-        {}
-      );
-
-      const htmlPath = path.join(context.extensionPath, "index.html");
-      panel.webview.html = fs.readFileSync(htmlPath, "utf-8");
-    }
+    () => createGraphView(context, {})
   );
 
-  context.subscriptions.push(disposable);
+  // Sidebar actions
+  const sidebar = vscode.window.registerWebviewViewProvider(
+    "featureDiscovery-sidebar",
+    new SidebarProvider(context)
+  );
+
+  // Adding to the context
+  context.subscriptions.push(sidebar);
+  context.subscriptions.push(graphViewCommand);
 }
