@@ -7,10 +7,10 @@
     { "id": 5, "label": "Node 5", "color": "green" }
   ],
   "edges": [
-    { "from": 1, "to": 3 },
-    { "from": 1, "to": 2 },
-    { "from": 2, "to": 4 },
-    { "from": 2, "to": 5 },
-    { "from": 3, "to": 3 }
+    { "from": 1, "to": 3, "color": { "color": "white" } },
+    { "from": 1, "to": 2, "color": { "color": "white" } },
+    { "from": 2, "to": 4, "color": { "color": "white" } },
+    { "from": 2, "to": 5, "color": { "color": "white" } },
+    { "from": 3, "to": 3, "color": { "color": "white" } }
   ]
 }

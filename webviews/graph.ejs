@@ -27,7 +27,8 @@
 
       #informations {
         display: none;
-        background-color: #0e0e0e;
+        background-color: var(--vscode-editor-background);
+        box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2);
 
         position: fixed;
         bottom: 0;
@@ -36,7 +37,7 @@
         width: 100%;
         flex-direction: column;
         overflow-y: auto;
-        padding: 0.5rem;
+        padding: 0.8rem;
       }
 
       #informations header {
@@ -75,7 +76,9 @@
         <p id="informations_close">&#10006;</p>
       </header>
 
-      <div id="informations_content"></div>
+      <div id="informations_content">
+        <p>Content will be display here (like extent ...)</p>
+      </div>
     </section>
   </body>
 
