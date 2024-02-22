@@ -1,3 +1,7 @@
+/**
+ * Generate an unique nonce for a webview
+ * @returns
+ */
 function getNonce() {
   let text = "";
   const possible =

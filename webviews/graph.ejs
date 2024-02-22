@@ -9,19 +9,51 @@
     />
     <style>
       * {
+        font-family: Arial, sans-serif;
         box-sizing: border-box;
         padding: 0;
         margin: 0;
       }
 
-      .node {
-        stroke: #fff;
-        stroke-width: 1.5px;
+      body {
+        width: 100%;
+        height: 100vh;
       }
 
-      .link {
-        stroke: #999;
-        stroke-opacity: 0.6;
+      #graph {
+        width: 100%;
+        height: 100%;
+      }
+
+      #informations {
+        display: none;
+        background-color: #0e0e0e;
+
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 30%;
+        width: 100%;
+        flex-direction: column;
+        overflow-y: auto;
+        padding: 0.5rem;
+      }
+
+      #informations header {
+        display: flex;
+      }
+
+      #informations header h2 {
+        flex: 1 1;
+        display: flex;
+        align-items: center;
+      }
+
+      #informations header p {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
       }
     </style>
     <script nonce="<%= nonce %>">
@@ -29,87 +61,45 @@
     </script>
     <script
       nonce="<%= nonce %>"
-      src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"
     ></script>
   </head>
+
   <body>
-    <p>The graph display here</p>
+    <div id="graph"></div>
+
+    <!-- Informations modal -->
+    <section id="informations">
+      <header>
+        <h2 id="informations_id">{nodeId}</h2>
+        <p id="informations_close">&#10006;</p>
+      </header>
+
+      <div id="informations_content"></div>
+    </section>
   </body>
+
   <script nonce="<%= nonce %>">
-    var width = 960,
-      height = 500;
+    const closeBtn = document.querySelector("#informations_close");
+    const informations = document.querySelector("#informations");
 
-    var color = d3.scale.category20();
+    closeBtn.addEventListener("click", function () {
+      informations.style.display = "none";
+    });
 
-    var force = d3.layout
-      .force()
-      .charge(-120)
-      .linkDistance(30)
-      .size([width, height]);
+    const data = <%- JSON.stringify(jsonToRender) %>;
 
-    var svg = d3
-      .select("body")
-      .append("svg")
-      .attr("width", width)
-      .attr("height", height);
+    const nodes = new vis.DataSet(data.nodes);
+    const edges = new vis.DataSet(data.edges);
+    const network = new vis.Network(document.querySelector("#graph"), { nodes, edges }, {});
 
-    d3.json(
-      "https://gist.githubusercontent.com/mbostock/4062045/raw/4176c7d0c0c5ce15630d16072da0af67bb50eb6a/miserables.json",
-      function (error, graph) {
-        if (error) throw error;
+    network.on("click", function (params) {
+      if (params.nodes.length > 0) {
+        const nodeId = params.nodes[0];
+        informations.style.display = "flex";
 
-        force.nodes(graph.nodes).links(graph.links).start();
-
-        var link = svg
-          .selectAll(".link")
-          .data(graph.links)
-          .enter()
-          .append("line")
-          .attr("class", "link")
-          .style("stroke-width", function (d) {
-            return Math.sqrt(d.value);
-          });
-
-        var node = svg
-          .selectAll(".node")
-          .data(graph.nodes)
-          .enter()
-          .append("circle")
-          .attr("class", "node")
-          .attr("r", 5)
-          .style("fill", function (d) {
-            return color(d.group);
-          })
-          .call(force.drag);
-
-        node.append("title").text(function (d) {
-          return d.name;
-        });
-
-        force.on("tick", function () {
-          link
-            .attr("x1", function (d) {
-              return d.source.x;
-            })
-            .attr("y1", function (d) {
-              return d.source.y;
-            })
-            .attr("x2", function (d) {
-              return d.target.x;
-            })
-            .attr("y2", function (d) {
-              return d.target.y;
-            });
-
-          node
-            .attr("cx", function (d) {
-              return d.x;
-            })
-            .attr("cy", function (d) {
-              return d.y;
-            });
-        });
+        document.querySelector("#informations_id").textContent = `Node ${nodeId}`;
       }
-    );
+    });
   </script>
 </html>

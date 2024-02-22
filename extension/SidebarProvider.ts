@@ -3,7 +3,11 @@ import ejs from "ejs";
 import fs from "fs";
 import path from "path";
 import getNonce from "./getNonce";
+import createGraphView from "./createGraphView";
 
+/**
+ * Provide sidebar implementation for the extension
+ */
 class SidebarProvider implements vscode.WebviewViewProvider {
   _view?: vscode.WebviewView;
   _doc?: vscode.TextDocument;
@@ -27,7 +31,7 @@ class SidebarProvider implements vscode.WebviewViewProvider {
             vscode.window.showErrorMessage(data.value);
             break;
           case "load-graph":
-            vscode.window.showInformationMessage("json opened !");
+            createGraphView(this._context, data.value);
             break;
         }
       }
