@@ -39,15 +39,6 @@ const TYPES_SUFIXES_TO_REMOVE = [
   "FULL_EXTENT_FULL_BEHAVIOR_",
 ] as const;
 
-function* id() {
-  let id = -1;
-  while (true) {
-    yield ++id;
-  }
-}
-
-const ID_GENERATOR = id();
-
 /**
  * Get the color based on the type of the node
  * @param type
@@ -75,7 +66,10 @@ function getColor(type: string) {
  * @param json
  * @returns
  */
-function convertToVisGraph(json: Lattice): Data | null {
+function convertToVisGraph(
+  json: Lattice,
+  ID_GENERATOR: Generator<number, void, unknown>
+): Data | null {
   const id = ID_GENERATOR.next().value as number;
 
   const data: Data = {
@@ -103,7 +97,7 @@ function convertToVisGraph(json: Lattice): Data | null {
 
   // Recusion and children visiting
   for (const children of json.children) {
-    const childrenData = convertToVisGraph(children);
+    const childrenData = convertToVisGraph(children, ID_GENERATOR);
 
     if (childrenData === null) continue;
 

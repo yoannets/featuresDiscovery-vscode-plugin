@@ -6,6 +6,16 @@ import getNonce from "./getNonce";
 import convertToVisGraph from "./convertToVisGraph";
 
 /**
+ * Create a id generator
+ */
+function* id() {
+  let id = -1;
+  while (true) {
+    yield ++id;
+  }
+}
+
+/**
  * Create a graphview based on the context of vscode and on a json
  * @param context
  * @param jsonToRender
@@ -25,7 +35,7 @@ function createGraphView(context: vscode.ExtensionContext, jsonToRender: any) {
 
   try {
     // Convert the latice json to the vis format
-    const convertedJson = convertToVisGraph(jsonToRender);
+    const convertedJson = convertToVisGraph(jsonToRender, id());
 
     const htmlPath = path.join(context.extensionPath, "webviews/graph.ejs");
     panel.webview.html = ejs.render(fs.readFileSync(htmlPath, "utf-8"), {
