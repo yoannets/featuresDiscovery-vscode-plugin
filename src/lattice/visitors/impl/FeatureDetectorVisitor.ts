@@ -1,13 +1,8 @@
-import { Visitor } from "../Visitor";
+import { Direction, Visitor } from "../Visitor";
 import { LatticeNode } from "../../model/LatticeNode";
 import { ReverseInheritanceRelationBuilder } from "../../../input/impl/ReverseInheritanceRelationBuilder";
-import {
-  IType,
-  IField,
-  IMethod,
-  ITypeHierarchy,
-  JavaModelException,
-} from "eclipse";
+import { IType, IMethod } from "../../../polyfills/eclipse";
+import { Lattice } from "../../model/Lattice";
 
 export enum FeatureTypeName {
   ADHOC = "ADHOC",
@@ -92,6 +87,24 @@ export class FeatureDetectorVisitor implements Visitor {
   constructor(builder: ReverseInheritanceRelationBuilder) {
     this.relationBuilder = builder;
     this.candidateFeatureNodes = new Map<LatticeNode, FeatureType>();
+  }
+  visitLatticeFromTop(aLattice: Lattice): void {
+    throw new Error("Method not implemented.");
+  }
+  visitLatticeFromBottom(aLattice: Lattice): void {
+    throw new Error("Method not implemented.");
+  }
+  getCurrentVisitDirection(): Direction {
+    throw new Error("Method not implemented.");
+  }
+  visitLatticeNode(latticeNode: LatticeNode, direction: Direction): void {
+    throw new Error("Method not implemented.");
+  }
+  processVisitedNode(node: LatticeNode): void {
+    throw new Error("Method not implemented.");
+  }
+  reset(): void {
+    throw new Error("Method not implemented.");
   }
 
   processNode(node: LatticeNode): void {

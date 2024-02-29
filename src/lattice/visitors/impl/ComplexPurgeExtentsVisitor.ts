@@ -3,6 +3,7 @@ import { Direction, Visitor } from "../Visitor";
 import { LatticeNode } from "../../model/LatticeNode";
 import { ReverseInheritanceRelationBuilder } from "../../../input/impl/ReverseInheritanceRelationBuilder";
 import { Lattice } from "../../model/Lattice";
+import { IType, IMethod, ITypeHierarchy } from "../../../polyfills/eclipse";
 
 /**
  * This visitor traverses the lattice, and for each node, purges the extent of
@@ -53,7 +54,7 @@ export class ComplexPurgeExtentsVisitor implements Visitor {
 
   public processNode(node: LatticeNode): void {
     // First, if this is the top node, exit
-    if (node.intent.isEmpty()) return;
+    if (node.intent.size === 0) return;
 
     let intersection: Set<Object> | null = null;
     const extent: Set<Object> = node.extent;

@@ -1,12 +1,36 @@
-// @TODO: Fixe eclipse types
+import {
+  IJavaProject,
+  IType,
+  ITypeHierarchy,
+  JavaModelException,
+} from "../../../polyfills/eclipse";
+import { Lattice } from "../../model/Lattice";
 import { LatticeNode } from "../../model/LatticeNode";
-import { Visitor } from "../Visitor";
+import { Direction, Visitor } from "../Visitor";
 
 export class PurgeExtentsVisitor implements Visitor {
   private javaProject: IJavaProject;
 
   constructor(project: IJavaProject) {
     this.javaProject = project;
+  }
+  visitLatticeFromTop(aLattice: Lattice): void {
+    throw new Error("Method not implemented.");
+  }
+  visitLatticeFromBottom(aLattice: Lattice): void {
+    throw new Error("Method not implemented.");
+  }
+  getCurrentVisitDirection(): Direction {
+    throw new Error("Method not implemented.");
+  }
+  visitLatticeNode(latticeNode: LatticeNode, direction: Direction): void {
+    throw new Error("Method not implemented.");
+  }
+  processVisitedNode(node: LatticeNode): void {
+    throw new Error("Method not implemented.");
+  }
+  reset(): void {
+    throw new Error("Method not implemented.");
   }
 
   processNode(node: LatticeNode): void {

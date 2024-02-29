@@ -84,6 +84,8 @@
   </head>
 
   <body>
+    <p id="loading">Loading...</p>
+
     <div id="graph"></div>
 
     <!-- Informations modal -->
@@ -122,7 +124,41 @@
 
     const nodes = new vis.DataSet(data.nodes);
     const edges = new vis.DataSet(data.edges);
-    const network = new vis.Network(document.querySelector("#graph"), { nodes, edges }, {});
+
+    const options = {
+        edges: {
+          width: 0.15,
+          color: { color: "white" }
+        },
+        nodes: {
+          shape: "box",
+          margin: 10,
+        },
+        physics: false,
+        layout: {
+          hierarchical: {
+              enabled: true,
+              levelSeparation: 1500, // Distance between nodes
+              nodeSpacing: 100,
+              treeSpacing: 200,
+              blockShifting: true,
+              edgeMinimization: true,
+              parentCentralization: true,
+              direction: "LR", // Left-right
+              sortMethod: "directed"
+          }
+        },
+      };
+
+    const network = new vis.Network(document.querySelector("#graph"), { nodes, edges }, options);
+
+    network.on("stabilizationIterationsDone", function () {
+        network.setOptions({ physics: false });
+    });
+
+    network.on("afterDrawing", function (ctx) {
+        document.querySelector("#loading").style.display = "none";
+    });
 
     network.on("click", function (params) {
       if (params.nodes.length > 0) {

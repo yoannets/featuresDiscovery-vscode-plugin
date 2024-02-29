@@ -1,8 +1,9 @@
-// @TODO: Fixe eclipse types
+import { IType } from "../../../polyfills/eclipse";
 import { AbstractVisitor2 } from "./AbstractVisitor2";
 import { Parser } from "./Parser";
 import { PrettyPrinter } from "./PrettyPrinter";
 import { Type } from "./Type";
+import { Node } from "./Node";
 
 export class TypeResolver extends AbstractVisitor2 {
   private _context: IType;

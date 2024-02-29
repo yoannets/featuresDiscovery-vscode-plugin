@@ -1,4 +1,5 @@
 import { AbstractVisitor2 } from "./AbstractVisitor2";
+import { Node } from "./Node";
 
 export class PrettyPrinter extends AbstractVisitor2 {
   private _output: string;

@@ -5,6 +5,7 @@ import {
   JAVA_ELEMENT_PRINTER,
   LatticePrettyPrinter,
 } from "./LatticePrettyPrinter";
+import { Node } from "./Node";
 
 export class PrintCandidatesVisitor extends LatticePrettyPrinter {
   private candidateNodes: Map<LatticeNode, FeatureType>;
@@ -29,7 +30,7 @@ export class PrintCandidatesVisitor extends LatticePrettyPrinter {
   preprocessChildren(node: LatticeNode): void {
     let nodeIndent = this.getNodeIndents().get(node) || "";
     if (this.candidateNodes.has(node)) {
-      nodeIndent = nodeIndent.replaceAll("->", "  ");
+      nodeIndent = nodeIndent.replace(/->/g, "  ");
       console.log(
         `${nodeIndent}FEATURE TYPE: ${this.candidateNodes.get(node)}`
       );

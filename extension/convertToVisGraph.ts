@@ -20,7 +20,6 @@ type Data = {
   edges: {
     from: number;
     to: number;
-    color: { color: string };
   }[];
   groupBy: Record<number, Lattice>;
 };
@@ -105,7 +104,7 @@ function convertToVisGraph(
     data.edges = [
       ...data.edges,
       ...childrenData.edges,
-      { from: id, to: childrenData.id, color: { color: "white" } },
+      { from: id, to: childrenData.id },
     ];
     data.groupBy = {
       ...data.groupBy,

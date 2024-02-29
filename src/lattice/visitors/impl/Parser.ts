@@ -1,6 +1,7 @@
 import { Input } from "./Input";
 import { Token } from "./Token";
 import { Type } from "./Type";
+import { Node } from "./Node";
 
 export class Parser {
   private _array_as_node: boolean;
@@ -10,21 +11,21 @@ export class Parser {
   }
 
   private parseGeneric(input: Input, parent: Node): void {
-    let next_token: Token = input.consume();
+    let next_token = input.consume() as Token;
     if (!next_token.isGenericStart()) {
       throw new Error("Unexpected token");
     }
 
     let valid: boolean = true;
     while (valid) {
-      next_token = input.peek();
+      next_token = input.peek() as Token;
 
       if (next_token.isGenericSeparator()) {
         // Eat the separator
         input.consume();
 
         // Check the next one right now, it could be the end
-        next_token = input.peek();
+        next_token = input.peek() as Token;
         if (next_token.isGenericStop()) {
           input.consume();
           valid = false;
@@ -40,8 +41,8 @@ export class Parser {
     }
   }
 
-  private parseType(input: Input, parent: Node): Node {
-    let next_token: Token = input.peek();
+  private parseType(input: Input, parent: Node | null): Node {
+    let next_token = input.peek() as Token;
     let type_is_array: boolean = false;
     if (next_token.isArray()) {
       // Eat the token
@@ -58,12 +59,12 @@ export class Parser {
 
     // Generate the node for the current type
     let current: Node = new Node(
-      new Type(input.consume().getChars(), type_is_array),
+      new Type(input.consume()!.getChars(), type_is_array),
       parent
     );
 
     // Check if there is anything after the type
-    next_token = input.peek();
+    next_token = input.peek() as Token;
     if (next_token !== null) {
       if (next_token.isGenericStart()) {
         this.parseGeneric(input, current);

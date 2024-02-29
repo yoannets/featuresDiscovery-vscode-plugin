@@ -2,6 +2,8 @@ import { NodeFeatureType } from "../graph/model/NodeFeatureType";
 import { Visitor, Direction } from "../visitors/Visitor";
 
 export interface LatticeNode {
+  intent: Set<any>;
+  extent: Set<any>;
   parents: Set<LatticeNode>;
   children: Set<LatticeNode>;
   getExtent(): Set<any>;

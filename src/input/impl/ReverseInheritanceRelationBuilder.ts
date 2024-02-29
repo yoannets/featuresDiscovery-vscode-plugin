@@ -1,5 +1,13 @@
 // @TODO: Fixe eclipse types
 import { Relation } from "../../lattice/model/Relation";
+import {
+  IJavaProject,
+  MethodEntry,
+  IType,
+  IMethod,
+  IPackageFragment,
+  ICompilationUnit,
+} from "../../polyfills/eclipse";
 import { RelationBuilder } from "../RelationBuilder";
 
 export class ReverseInheritanceRelationBuilder implements RelationBuilder {

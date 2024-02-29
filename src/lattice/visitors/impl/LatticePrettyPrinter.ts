@@ -1,4 +1,4 @@
-// @TODO: Fixe eclipse types
+import { IMethod, IType, Signature } from "../../../polyfills/eclipse";
 import { LatticeNode } from "../../model/LatticeNode";
 import { Visitor } from "../Visitor";
 

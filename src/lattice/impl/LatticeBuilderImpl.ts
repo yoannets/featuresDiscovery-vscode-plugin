@@ -1,9 +1,11 @@
-import { LatticeBuilder } from "./your-lattice-builder-path"; // Assurez-vous d'importer correctement LatticeBuilder depuis votre module
-import { RelationBuilder } from "./your-relation-builder-path"; // Assurez-vous d'importer correctement RelationBuilder depuis votre module
-import { Lattice, LatticeNode } from "./your-lattice-model-path"; // Assurez-vous d'importer correctement Lattice et LatticeNode depuis votre module
-import { Relation } from "./your-relation-model-path"; // Assurez-vous d'importer correctement Relation depuis votre module
+import { RelationBuilder } from "../../input/RelationBuilder";
+import { LatticeBuilder } from "../LatticeBuilder";
+import { Lattice } from "../model/Lattice";
+import { Relation } from "../model/Relation";
+import { LatticeImpl } from "../model/impl/LatticeImpl";
+import { LatticeNodeImpl } from "../model/impl/LatticeNodeImpl";
 
-class LatticeBuilderImpl implements LatticeBuilder {
+export class LatticeBuilderImpl implements LatticeBuilder {
   buildLattice(aRelation: Relation, aBuilder: RelationBuilder): Lattice {
     const lattice = new LatticeImpl();
 

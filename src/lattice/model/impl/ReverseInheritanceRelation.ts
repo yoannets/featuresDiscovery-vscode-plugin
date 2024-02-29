@@ -1,7 +1,12 @@
 import { RelationBuilder } from "../../../input/RelationBuilder";
-import { IMethod, IType, JavaModelException } from "your-eclipse-jdt-core-path";
 import { RelationImpl } from "./RelationImpl";
 import { ReverseInheritanceRelationBuilder } from "../../../input/impl/ReverseInheritanceRelationBuilder";
+import {
+  IMethod,
+  Signature,
+  JavaModelException,
+  IType,
+} from "../../../polyfills/eclipse";
 
 export class ReverseInheritanceRelation extends RelationImpl {
   constructor(aBuilder: RelationBuilder) {
