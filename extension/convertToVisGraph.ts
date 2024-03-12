@@ -16,12 +16,15 @@ type Data = {
     id: number;
     label: string;
     color: string;
+    childrensId: number[];
+    areChildsHiden: boolean;
+    lattice: Lattice;
+    hidden: boolean;
   }[];
   edges: {
     from: number;
     to: number;
   }[];
-  groupBy: Record<number, Lattice>;
 };
 
 enum TYPE {
@@ -75,24 +78,22 @@ function convertToVisGraph(
     id,
     nodes: [],
     edges: [],
-    groupBy: [],
   };
 
   // Skip the node id the types is empty
   if (json.types.length === 0 && id !== 0) return null;
 
   // We had the node
-  data.nodes.push({
+  const currentNode: Data["nodes"][number] = {
     id,
     color: id === 0 ? "white" : getColor(json.types[0].FeatureTypeName),
     label: json.name,
-  });
-
-  // informations
-  data.groupBy[id] = {
-    ...json,
-    children: [],
+    lattice: json,
+    childrensId: [],
+    areChildsHiden: true,
+    hidden: id !== 0,
   };
+  data.nodes.push(currentNode);
 
   // Recusion and children visiting
   for (const children of json.children) {
@@ -100,16 +101,14 @@ function convertToVisGraph(
 
     if (childrenData === null) continue;
 
+    currentNode.childrensId.push(childrenData.id);
+
     data.nodes = [...data.nodes, ...childrenData.nodes];
     data.edges = [
       ...data.edges,
       ...childrenData.edges,
       { from: id, to: childrenData.id },
     ];
-    data.groupBy = {
-      ...data.groupBy,
-      ...childrenData.groupBy,
-    };
   }
 
   return data;

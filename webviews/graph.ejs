@@ -152,18 +152,21 @@
 
     const network = new vis.Network(document.querySelector("#graph"), { nodes, edges }, options);
 
-    network.on("stabilizationIterationsDone", function () {
-        network.setOptions({ physics: false });
-    });
-
     network.on("afterDrawing", function (ctx) {
         document.querySelector("#loading").style.display = "none";
     });
 
     network.on("click", function (params) {
+      // node click
       if (params.nodes.length > 0) {
         const nodeId = params.nodes[0];
-        const infos = data.groupBy[nodeId];
+        const node = nodes.get(nodeId);
+
+        if (node.childrensId && node.childrensId.length > 0) {
+            toggleChildrens(node);
+        }
+
+        const infos = node.lattice;
 
         if(!infos) return;
 
@@ -177,6 +180,49 @@
           return sufix + Object.entries(obj).map((curr) => curr.join(": ")).join("\n")
         }, "");
       }
+
+      // edge click
+      if (params.edges.length > 0) {
+        const edgeId = params.edges[0];
+        const edge = edges.get(edgeId);
+
+        // To implement
+      }
     });
+
+    function toggleChildrens(node) {
+      const otherUpdates = [];
+
+      const childrens = nodes.get({
+          filter: function (item) {
+              return node.childrensId.includes(item.id);
+          }
+      });
+
+      const hidden = !node.areChildsHiden;
+
+      // recursivity to go throught the child to hide them when we hide the parent
+      if(hidden) {
+        const childrensId = [childrens.map((child) => child.id)];
+        while(childrensId.length > 0) {
+          const currChildrensId = childrensId.shift()
+          const childs = nodes.get({
+              filter: function (item) {
+                  return currChildrensId.includes(item.id);
+              }
+          });
+          for(const child of childs) {
+            if(!child.hidden) childrens.push(child);
+            if(!child.areChildsHiden) {
+              otherUpdates.push({ id: child.id, areChildsHiden: true });
+              childrensId.push(child.childrensId);
+            }
+          }
+        }
+      }
+
+      const updates = childrens.map(node => ({id: node.id, hidden }));
+      nodes.update([...updates, { id: node.id, areChildsHiden: hidden }, ...otherUpdates]);
+    }
   </script>
 </html>
