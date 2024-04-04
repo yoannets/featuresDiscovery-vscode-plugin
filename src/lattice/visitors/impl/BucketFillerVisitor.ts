@@ -37,11 +37,16 @@ export class BucketFillerVisitor {
   }
 
   /**
+   *
+   */
+  publicprocessVisitedNode(node: LatticeNode): void {}
+
+  /**
    * Returns the bucket containing lattice nodes whose intent has cardinality size.
    * @param size Size of the intent
    * @returns Bucket containing lattice nodes
    */
-  public getBucketForSize(size: number): Set<LatticeNode> | undefined {
+  public getBucketForSize(size: number): Set<LatticeNode> {
     return this.bucketsPerSize.get(size);
   }
 

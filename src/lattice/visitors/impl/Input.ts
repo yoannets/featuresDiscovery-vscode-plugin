@@ -20,7 +20,7 @@ export class Input {
 
       // If we find a character that is not a valid continuation of the last one
       // let's push the tokens
-      if (current.match(/[a-zA-Z0-9.]+/)) {
+      if (/[a-zA-Z0-9.]+/.test(current)) {
         // Still a valid character, remember it
         token += current;
       } else {

@@ -36,7 +36,6 @@ export class ComplexPurgeExtentsVisitor implements Visitor {
     this.relationBuilder = builder;
   }
 
-  // @TODO: Fixe not implemented methods
   visitLatticeFromTop(aLattice: Lattice): void {
     throw new Error("Method not implemented.");
   }
@@ -55,17 +54,16 @@ export class ComplexPurgeExtentsVisitor implements Visitor {
   reset(): void {
     throw new Error("Method not implemented.");
   }
-  // END
 
   public processNode(node: LatticeNode): void {
     // First, if this is the top node, exit
-    if (node.intent.size === 0) return;
+    if (node.getIntent().size === 0) return;
 
-    let intersection: Set<Object> | null = null;
-    const extent: Set<Object> = node.extent;
-    const intent: Set<Object> = node.intent;
+    let intersection: Set<any> | null = null;
+    const extent: Set<any> = node.getExtent();
+    const intent: Set<any> = node.getIntent();
 
-    const classesToProcess: Object[] = [...extent];
+    const classesToProcess: any[] = [...extent];
 
     // First, create a type hierarchy to get the inheritance relationships
     let typeHierarchy: ITypeHierarchy | null = null;
@@ -81,7 +79,7 @@ export class ComplexPurgeExtentsVisitor implements Visitor {
         const itsAncestors: IType[] = typeHierarchy.getAllSupertypes(nextClass);
 
         // Compute the intersection between the extent and the list of ancestors
-        intersection = new Set<Object>(extent);
+        intersection = new Set<any>(extent);
         itsAncestors.forEach((ancestor: IType) => {
           if (extent.has(ancestor)) intersection!.add(ancestor);
         });
@@ -90,11 +88,11 @@ export class ComplexPurgeExtentsVisitor implements Visitor {
         // If an element's local interface contains the intent, we should not remove it because it has the intent,
         // NOT by virtue of cumulating the interfaces of its children, but has them independently, and should be counted
         // as an independent occurrence.
-        intersection.forEach((element: Object) => {
+        intersection.forEach((element: any) => {
           const type: IType = element as IType;
           const localDomainInterface: IMethod[] | undefined =
             this.relationBuilder.getLocalDomainInterfaces()!.get(type);
-          const localDomainInterfaceAsSet: Set<Object> = new Set<Object>(
+          const localDomainInterfaceAsSet: Set<any> = new Set<any>(
             localDomainInterface
           );
           if (

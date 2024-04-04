@@ -1,5 +1,4 @@
-import { IMethod, IType } from "your-eclipse-jdt-core-module";
-
+import { IMethod, IType } from "../../polyfills/eclipse";
 export class DelegationRecord {
   private mainType: IType;
   private mainTypeDomainInterface: IMethod[];

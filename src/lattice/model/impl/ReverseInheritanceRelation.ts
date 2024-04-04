@@ -13,13 +13,13 @@ export class ReverseInheritanceRelation extends RelationImpl {
     super(aBuilder);
   }
 
-  getAllImages(): Set<Object> {
+  getAllImages(): Set<any> {
     const relationBuilder =
       this.getRelationBuilder() as ReverseInheritanceRelationBuilder;
-    return relationBuilder.getAllMethods() as Set<Object>;
+    return relationBuilder.getAllMethods() as Set<any>;
   }
 
-  protected printImageObject(obj: Object): string {
+  protected printImageObject(obj: any): string {
     const method = obj as IMethod;
     try {
       return Signature.toString(
@@ -30,26 +30,18 @@ export class ReverseInheritanceRelation extends RelationImpl {
         true
       );
     } catch (e) {
-      if (e instanceof JavaModelException) {
-        console.error(e);
-        return "UNPRINTABLE METHOD SIGNATURE (Java Model Exception)";
-      } else {
-        throw e;
-      }
+      console.error(e);
+      return "UNPRINTABLE METHOD SIGNATURE";
     }
   }
 
-  protected printDomainObject(key: Object): string {
+  protected printDomainObject(key: any): string {
     const type = key as IType;
     try {
       return type.getFullyQualifiedParameterizedName();
     } catch (e) {
-      if (e instanceof JavaModelException) {
-        console.error(e);
-        return "UNIDENTIFIED_TYPE (JavaModelException)";
-      } else {
-        throw e;
-      }
+      console.error(e);
+      return "UNIDENTIFIED_TYPE";
     }
   }
 }

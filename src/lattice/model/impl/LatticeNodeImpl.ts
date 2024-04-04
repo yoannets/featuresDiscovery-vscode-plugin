@@ -1,18 +1,19 @@
 import { LatticeNode } from "../LatticeNode";
 import { Direction, Visitor } from "../../visitors/Visitor";
 import { NodeFeatureType } from "../../graph/model/NodeFeatureType";
+import { simpleHash } from "../../../polyfills/eclipse";
 
 export class LatticeNodeImpl implements LatticeNode {
   private name: string;
-  intent: Set<Object>;
-  extent: Set<Object>;
+  intent: Set<any>;
+  extent: Set<any>;
   parents: Set<LatticeNode>;
   children: Set<LatticeNode>;
   private types: NodeFeatureType[];
 
   constructor() {
-    this.intent = new Set<Object>();
-    this.extent = new Set<Object>();
+    this.intent = new Set<any>();
+    this.extent = new Set<any>();
     this.parents = new Set<LatticeNode>();
     this.children = new Set<LatticeNode>();
     this.types = [];
@@ -26,27 +27,27 @@ export class LatticeNodeImpl implements LatticeNode {
     this.extent = extent;
   }
 
-  getExtent(): Set<Object> {
+  getExtent(): Set<any> {
     return this.extent;
   }
 
-  addToExtent(anObject: Object): void {
+  addToExtent(anObject: any): void {
     this.extent.add(anObject);
   }
 
-  removeFromExtent(anObject: Object): void {
+  removeFromExtent(anObject: any): void {
     this.extent.delete(anObject);
   }
 
-  removeFromIntent(anObject: Object): void {
+  removeFromIntent(anObject: any): void {
     this.intent.delete(anObject);
   }
 
-  addToIntent(anObject: Object): void {
+  addToIntent(anObject: any): void {
     this.intent.add(anObject);
   }
 
-  getIntent(): Set<Object> {
+  getIntent(): Set<any> {
     return this.intent;
   }
 
@@ -86,11 +87,11 @@ export class LatticeNodeImpl implements LatticeNode {
     aVisitor.visitLatticeNode(this, direction);
   }
 
-  addCollectionToExtent(objects: Object[]): void {
+  addCollectionToExtent(objects: any[]): void {
     objects.forEach((obj) => this.extent.add(obj));
   }
 
-  addCollectionToIntent(properties: Object[]): void {
+  addCollectionToIntent(properties: any[]): void {
     properties.forEach((prop) => this.intent.add(prop));
   }
 
@@ -128,7 +129,7 @@ export class LatticeNodeImpl implements LatticeNode {
   }
 
   hashCode(): number {
-    return Math.abs(this.extent.size * 31 + this.intent.size);
+    return simpleHash(...this.extent, ...this.intent);
   }
 
   setName(name: string): void {

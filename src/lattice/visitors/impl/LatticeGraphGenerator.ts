@@ -1,8 +1,14 @@
+import {
+  IMethod,
+  IType,
+  Signature,
+  simpleHash,
+} from "../../../polyfills/eclipse";
 import { NodeFeatureType } from "../../graph/model/NodeFeatureType";
 import { LatticeNode } from "../../model/LatticeNode";
 import { Visitor } from "../Visitor";
 import { AbstractVisitor } from "./AbstractVisitor";
-import { FeatureType } from "./FeatureDetectorVisitor";
+import { FeatureType, FeatureTypeName } from "./FeatureDetectorVisitor";
 
 export class LatticeGraphGenerator extends AbstractVisitor implements Visitor {
   candidateNodes: Map<LatticeNode, FeatureType>;
@@ -14,65 +20,68 @@ export class LatticeGraphGenerator extends AbstractVisitor implements Visitor {
 
   processNode(node: LatticeNode): void {
     if (this.candidateNodes.has(node)) {
-      const types = this.candidateNodes.get(node)!;
+      const types = this.candidateNodes.get(node);
       const tags = types.featureTags;
 
       for (const tag of tags) {
         const nodeType = new NodeFeatureType();
-        nodeType.featureTypeName = tag.name;
+        nodeType.setFeatureTypeName(tag.name.toString());
 
-        if (tag.name !== "ADHOC") {
-          nodeType.anchor = tag.anchorType;
-          nodeType.coverage = tag.anchorTypeBehaviorCoverage;
+        if (tag.name !== FeatureTypeName.ADHOC) {
+          nodeType.setAnchor(tag.anchorType.getFullyQualifiedName());
+          nodeType.setCoverage(tag.anchorTypeBehaviorCoverage);
         }
 
-        node.types.push(nodeType);
+        node.getTypes().push(nodeType);
       }
     } else {
-      for (const parent of node.parents) {
-        const index = parent.children.indexOf(node);
-        if (index !== -1) {
-          parent.children.splice(index, 1);
-        }
+      for (const parent of node.getParents()) {
+        parent.getChildren().delete(node);
       }
     }
 
     const childToRemove: LatticeNode[] = [];
-    for (const child of node.children) {
+    for (const child of node.getChildren()) {
       if (!this.candidateNodes.has(child)) {
         childToRemove.push(child);
       }
     }
 
     for (const child of childToRemove) {
-      const index = node.children.indexOf(child);
-      if (index !== -1) {
-        node.children.splice(index, 1);
-      }
+      const index = node.getChildren().delete(child);
     }
-
-    node.extent = node.extent.map((extentElement) => {
-      let extent = "";
+    const stringExtents = new Set<string>();
+    for (const extentElement of node.getExtent()) {
+      let extent: string = "";
       try {
-        extent = extentElement;
+        extent = (extentElement as IType).getFullyQualifiedParameterizedName();
       } catch (e) {
         console.error(e);
       }
-      return extent;
-    });
+      stringExtents.add(extent);
+    }
+    node.setExtent(stringExtents);
 
-    node.intent = node.intent.map((intentElement) => {
-      let intent = "";
+    const stringIntents = new Set<string>();
+    for (const intentElement of node.getIntent()) {
+      let intent: string = "";
+      const method: IMethod = intentElement as IMethod;
       try {
-        intent = intentElement;
+        intent = Signature.toString(
+          method.getSignature(),
+          method.getElementName(),
+          method.getParameterNames(),
+          true,
+          true
+        );
       } catch (e) {
         console.error(e);
       }
-      return intent;
-    });
-
-    node.name = String(
-      Objects.hash(node.extent.join(), node.intent.join()) & 0xfffffff
+      stringIntents.add(intent);
+    }
+    node.setIntent(stringIntents);
+    node.setName(
+      simpleHash(...node.getExtent(), ...node.getIntent()).toString()
     );
   }
 }
