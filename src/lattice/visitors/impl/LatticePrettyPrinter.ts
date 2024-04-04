@@ -1,6 +1,7 @@
 import { IMethod, IType, Signature } from "../../../polyfills/eclipse";
+import { Lattice } from "../../model/Lattice";
 import { LatticeNode } from "../../model/LatticeNode";
-import { Visitor } from "../Visitor";
+import { Direction, Visitor } from "../Visitor";
 
 export interface ElementPrinter {
   printIntentElement(intentElement: any): string;
@@ -46,12 +47,29 @@ export class LatticePrettyPrinter implements Visitor {
   protected printer: ElementPrinter;
   protected nodeIndents: Map<LatticeNode, string>;
   private ids: Map<LatticeNode, string>;
-  private globalCounter: number = 0;
+  protected globalCounter: number = 0;
 
   constructor(printer: ElementPrinter = DEFAULT_ELEMENT_PRINTER) {
     this.printer = printer;
     this.nodeIndents = new Map<LatticeNode, string>();
     this.ids = new Map<LatticeNode, string>();
+  }
+
+  visitLatticeFromTop(aLattice: Lattice): void {
+    throw new Error("Method not implemented.");
+  }
+  visitLatticeFromBottom(aLattice: Lattice): void {
+    throw new Error("Method not implemented.");
+  }
+  getCurrentVisitDirection(): Direction {
+    throw new Error("Method not implemented.");
+  }
+  visitLatticeNode(latticeNode: LatticeNode, direction: Direction): void {
+    throw new Error("Method not implemented.");
+  }
+
+  public getIds(): Map<LatticeNode, string> {
+    return this.ids;
   }
 
   static defaultPrettyPrinter(): LatticePrettyPrinter {
@@ -102,14 +120,14 @@ export class LatticePrettyPrinter implements Visitor {
     this.ids.clear();
   }
 
-  private printIntent(node: LatticeNode): string {
+  protected printIntent(node: LatticeNode): string {
     const printStrings: string[] = Array.from(node.getIntent(), (feature) =>
       this.printer.printIntentElement(feature)
     );
     return printStrings.sort().toString();
   }
 
-  private printExtent(node: LatticeNode): string {
+  protected printExtent(node: LatticeNode): string {
     const printStrings: string[] = Array.from(node.getExtent(), (object) =>
       this.printer.printExtentElement(object)
     );

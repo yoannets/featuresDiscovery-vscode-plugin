@@ -4,8 +4,8 @@ import { NodeFeatureType } from "../../graph/model/NodeFeatureType";
 
 export class LatticeNodeImpl implements LatticeNode {
   private name: string;
-  private intent: Set<Object>;
-  private extent: Set<Object>;
+  intent: Set<Object>;
+  extent: Set<Object>;
   parents: Set<LatticeNode>;
   children: Set<LatticeNode>;
   private types: NodeFeatureType[];

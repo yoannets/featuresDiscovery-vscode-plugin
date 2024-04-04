@@ -5,7 +5,8 @@ import {
   JAVA_ELEMENT_PRINTER,
   LatticePrettyPrinter,
 } from "./LatticePrettyPrinter";
-import { Node } from "./Node";
+import { Node } from "../../graph/model/Node";
+import { simpleHash } from "../../../polyfills/eclipse";
 
 export class PrintCandidatesVisitor extends LatticePrettyPrinter {
   private candidateNodes: Map<LatticeNode, FeatureType>;
@@ -42,50 +43,57 @@ export class PrintCandidatesVisitor extends LatticePrettyPrinter {
   }
 
   processNode(node: LatticeNode): void {
-    const graphNode = new Node(this.getIds().get(node) || "");
-    let findNode = this.nodes.findIndex((n) => n.getID() === graphNode.getID());
-    if (findNode >= 0) {
-      graphNode = this.nodes[findNode];
-    } else {
-      this.nodes.push(graphNode);
-    }
-    for (const child of node.getChildren()) {
-      let childId = this.getIds().get(child) || "";
-      if (!childId) {
-        childId = `${++this.globalCounter}`;
+    // adding the visited node to list of node graph
+    let graphNode = new Node(this.getIds().get(node) || "");
+    let findNode = this.nodes.indexOf(graphNode);
+
+    if (findNode >= 0) graphNode = this.nodes[findNode];
+    else this.nodes.push(graphNode);
+
+    for (let child of node.getChildren()) {
+      // get the id of the child or create it
+      let childId = this.getIds().get(child);
+      if (childId === null) {
+        // hiding the word node to display only the id in the graph node
+        childId = "" + this.globalCounter++;
         this.getIds().set(child, childId);
       }
-      let graphChild = new Node(childId);
-      const index = this.nodes.findIndex(
-        (n) => n.getID() === graphChild.getID()
-      );
-      if (index === -1) {
+
+      let graphChild = new Node(childId || "");
+
+      if (!this.nodes.includes(graphChild)) {
         this.nodes.push(graphChild);
-      } else {
-        graphChild = this.nodes[index];
       }
       graphNode.addChild(graphChild);
     }
 
+    // check if candidate node:
     if (this.candidateNodes.has(node)) {
+      // then call inherited version
       super.processNode(node);
-      const types = this.candidateNodes.get(node);
-      for (const tag of types.featureTags) {
-        const nodeType = new NodeFeatureType();
+      // assign the type, extent and intent of the node
+
+      let types = this.candidateNodes.get(node);
+      let tags = types!.featureTags;
+      for (let tag of tags) {
+        let nodeType = new NodeFeatureType();
         nodeType.setFeatureTypeName(tag.name.toString());
+
         if (tag.name !== FeatureTypeName.ADHOC) {
-          nodeType.setAnchor(tag.anchorType.getFullyQualifiedName());
+          nodeType.setAnchor(tag.anchorType!.getFullyQualifiedName());
           nodeType.setCoverage(tag.anchorTypeBehaviorCoverage);
         }
-        graphNode.getTypes().add(nodeType);
+
+        graphNode.getTypes().push(nodeType);
       }
+
       graphNode.setExtent(super.printExtent(node));
       graphNode.setIntent(super.printIntent(node));
       graphNode.setID(
-        Objects.hash(super.printExtent(node), super.printIntent(node)) &
-          0xfffffff
+        simpleHash(super.printExtent(node), super.printIntent(node))
       );
-      console.log(`###########feature ${this.candidateNodes.get(node)}`);
+
+      console.log("###########feature " + this.candidateNodes.get(node));
     }
   }
 

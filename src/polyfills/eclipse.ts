@@ -83,6 +83,9 @@ export interface IMethod {
   getName(): string;
   getReturnType(): IType;
   getParameters(): IParameter[];
+  getSignature(): string;
+  getElementName(): string;
+  getParameterNames(): string[];
 }
 
 export interface IParameter {
@@ -96,6 +99,8 @@ export interface IType {
   resolveType(typeName: string): string[][] | null;
   getElementName(): string;
   newTypeHierarchy(monitor: IProgressMonitor | null): ITypeHierarchy;
+  getFullyQualifiedName(): string;
+  getFullyQualifiedParameterizedName(): string;
 }
 export interface IProgressMonitor {
   beginTask(taskName: string, totalWork: number): void;
@@ -112,7 +117,71 @@ export class JavaModelException {
 }
 
 export class Signature {
-  // Implémentez ici les détails de la classe Signature
+  static toString(
+    signature: string,
+    methodName: string,
+    parameterNames: string[],
+    fullyQualifiedName: boolean,
+    includeReturnType: boolean
+  ): string {
+    // Découper la signature pour obtenir les types des paramètres et le type de retour
+    const regex = /\((.*)\)(.*)/;
+    const match = signature.match(regex);
+    if (!match) {
+      throw new Error("Invalid signature format");
+    }
+
+    const paramTypes = match[1]
+      .split(";")
+      .map((type) => this.getTypeName(type, fullyQualifiedName));
+    const returnType = this.getTypeName(match[2], fullyQualifiedName);
+
+    let result = "";
+
+    if (includeReturnType) {
+      result += `${returnType} `;
+    }
+
+    result += `${methodName}(`;
+
+    // Ajouter les noms des paramètres à 'result'
+    result += paramTypes
+      .map((type, index) => `${type} ${parameterNames[index] || "arg" + index}`)
+      .join(", ");
+
+    result += ")";
+
+    return result;
+  }
+
+  private static getTypeName(
+    typeSignature: string,
+    fullyQualifiedName: boolean
+  ): string {
+    // Ici, vous devez implémenter la logique pour convertir les signatures de type Java
+    // en noms de types lisibles, en tenant compte de `fullyQualifiedName`.
+    // Cela peut être assez complexe, car vous devez gérer différents cas comme les types primitifs,
+    // les tableaux, les types génériques, etc.
+    // Pour simplifier, je vais seulement montrer un traitement basique ici :
+
+    typeSignature = typeSignature.trim();
+
+    if (typeSignature.endsWith(";")) {
+      typeSignature = typeSignature.substring(0, typeSignature.length - 1);
+    }
+
+    if (typeSignature.startsWith("L") && fullyQualifiedName) {
+      // Enlever le 'L' initial et remplacer '/' par '.'
+      return typeSignature.substring(1).replace(/\//g, ".");
+    } else if (typeSignature.startsWith("L")) {
+      // Prendre uniquement le nom simple de la classe
+      return typeSignature.substring(typeSignature.lastIndexOf("/") + 2);
+    }
+
+    // Ajouter la gestion des autres cas (types primitifs, tableaux, génériques, etc.)
+
+    return typeSignature; // Retourner la signature telle quelle si non gérée
+  }
 }
 
 export class MethodEntry {
@@ -147,4 +216,53 @@ export interface ITypeHierarchy {
   getSuperTypes(type: IType): IType[];
   contains(type: IType): boolean;
   commonSuperType(types: IType[]): IType | null;
+  getAllSupertypes(IType: IType): IType[];
+}
+
+export class NullProgressMonitor implements IProgressMonitor {
+  private _isCanceled: boolean;
+
+  constructor() {
+    this._isCanceled = false;
+  }
+
+  setTaskName(taskName: string): void {
+    throw new Error("Method not implemented.");
+  }
+
+  public beginTask(name: string, totalWork: number): void {
+    // Ne fait rien car c'est un moniteur de progression nul
+  }
+
+  public done(): void {
+    // Ne fait rien car c'est un moniteur de progression nul
+  }
+
+  public isCanceled(): boolean {
+    return this._isCanceled;
+  }
+
+  public setCanceled(value: boolean): void {
+    this._isCanceled = value;
+  }
+
+  public subTask(name: string): void {
+    // Ne fait rien car c'est un moniteur de progression nul
+  }
+
+  public worked(work: number): void {
+    // Ne fait rien car c'est un moniteur de progression nul
+  }
+}
+
+export function simpleHash(...args: string[]): number {
+  let hash = 0;
+  for (let arg of args) {
+    for (let i = 0; i < arg.length; i++) {
+      const char = arg.charCodeAt(i);
+      hash = (hash << 5) - hash + char;
+      hash |= 0; // Convert to 32bit integer
+    }
+  }
+  return hash & 0xfffffff;
 }

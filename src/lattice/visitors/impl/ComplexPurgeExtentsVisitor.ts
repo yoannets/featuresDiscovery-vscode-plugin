@@ -1,9 +1,14 @@
-// @TODO: Fixe eclipse types
 import { Direction, Visitor } from "../Visitor";
 import { LatticeNode } from "../../model/LatticeNode";
 import { ReverseInheritanceRelationBuilder } from "../../../input/impl/ReverseInheritanceRelationBuilder";
 import { Lattice } from "../../model/Lattice";
-import { IType, IMethod, ITypeHierarchy } from "../../../polyfills/eclipse";
+import {
+  IType,
+  IMethod,
+  ITypeHierarchy,
+  IProgressMonitor,
+  NullProgressMonitor,
+} from "../../../polyfills/eclipse";
 
 /**
  * This visitor traverses the lattice, and for each node, purges the extent of
@@ -64,6 +69,7 @@ export class ComplexPurgeExtentsVisitor implements Visitor {
 
     // First, create a type hierarchy to get the inheritance relationships
     let typeHierarchy: ITypeHierarchy | null = null;
+    let pMonitor: IProgressMonitor = new NullProgressMonitor();
 
     // While there are still classes to process from the extent
     while (classesToProcess.length > 0) {
@@ -87,7 +93,7 @@ export class ComplexPurgeExtentsVisitor implements Visitor {
         intersection.forEach((element: Object) => {
           const type: IType = element as IType;
           const localDomainInterface: IMethod[] | undefined =
-            this.relationBuilder.getLocalDomainInterfaces().get(type);
+            this.relationBuilder.getLocalDomainInterfaces()!.get(type);
           const localDomainInterfaceAsSet: Set<Object> = new Set<Object>(
             localDomainInterface
           );

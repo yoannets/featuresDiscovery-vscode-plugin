@@ -2,15 +2,18 @@ import {
   IAdaptable,
   IPropertyDescriptor,
   IPropertySource,
-} from "some-library-path"; // Chemin fictif, remplacez-le par le chemin réel
+} from "../../../polyfills/eclipse";
 import { NodeFeatureType } from "./NodeFeatureType";
 
 export class Node implements IAdaptable, IPropertySource {
+  private ID: number;
   private name: string;
   private types: Array<NodeFeatureType> = [];
   private extent: string | undefined;
   private intent: string | undefined;
   private children: Array<Node> = [];
+  propertyDescriptors: IPropertyDescriptor[];
+  properties: Map<string, any>;
 
   constructor(name: string) {
     this.name = name;
@@ -93,6 +96,10 @@ export class Node implements IAdaptable, IPropertySource {
     }, intent=${this.intent}, children=${this.children}], hashcode ${
       this.extent && this.intent ? this.extent + this.intent : "undefined"
     }`;
+  }
+
+  public getTypes(): NodeFeatureType[] {
+    return this.types;
   }
 
   getID(): number {
