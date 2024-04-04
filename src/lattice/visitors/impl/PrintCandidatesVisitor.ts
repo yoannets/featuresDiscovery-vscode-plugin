@@ -8,6 +8,23 @@ import {
 import { Node } from "../../graph/model/Node";
 import { simpleHash } from "../../../polyfills/eclipse";
 
+/**
+ * this visitor pretty prints the candidate nodes in a lattice. It starts from either the top (increasing intent/feature size,
+ * and decreasing extent/occurrences) or the bottom (decreasing feature/intent size, increasing extent/occurrences number) and
+ * only prints the contents of the candidate nodes. This provides a hierarchical printout of candidate features that is easier to read
+ * than a simple list.
+ *
+ * The difference between this visitor and the pretty printer:
+ * 1) we only print non-visited AND candidate nodes
+ * 2) non-candidate nodes are skipped
+ * 3) candidate nodes that are already visited: we print the Node_ID
+ * 4) we override the preprocessChildren() method so that it does not print anything since there may be several
+ * levels between two consecutive candidate nodes. We will increment the indents to gives us an idea, but we
+ * won't print "ITS CHILDREN:================="
+ *
+ * @author Hafedh
+ *
+ */
 export class PrintCandidatesVisitor extends LatticePrettyPrinter {
   private candidateNodes: Map<LatticeNode, FeatureType>;
 
@@ -24,12 +41,18 @@ export class PrintCandidatesVisitor extends LatticePrettyPrinter {
     return this.nodes;
   }
 
-  public getNodeIndents(): Map<LatticeNode, String> {
-    return this.nodeIndents;
+  setNodes(nodes: Node[]): void {
+    this.nodes = nodes;
   }
 
   preprocessChildren(node: LatticeNode): void {
-    let nodeIndent = this.getNodeIndents().get(node) || "";
+    let nodeIndent = this.getNodeIndents().get(node);
+
+    if (typeof nodeIndent !== "string") {
+      nodeIndent = "";
+      this.getNodeIndents().set(node, nodeIndent);
+    }
+
     if (this.candidateNodes.has(node)) {
       nodeIndent = nodeIndent.replace(/->/g, "  ");
       console.log(

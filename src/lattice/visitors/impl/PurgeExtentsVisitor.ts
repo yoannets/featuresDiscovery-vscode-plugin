@@ -1,51 +1,39 @@
 import {
   IJavaProject,
+  IProgressMonitor,
   IType,
   ITypeHierarchy,
-  JavaModelException,
+  NullProgressMonitor,
 } from "../../../polyfills/eclipse";
-import { Lattice } from "../../model/Lattice";
 import { LatticeNode } from "../../model/LatticeNode";
-import { Direction, Visitor } from "../Visitor";
+import { Visitor } from "../Visitor";
+import { AbstractVisitor } from "./AbstractVisitor";
 
-export class PurgeExtentsVisitor implements Visitor {
+export class PurgeExtentsVisitor extends AbstractVisitor implements Visitor {
   private javaProject: IJavaProject;
 
   constructor(project: IJavaProject) {
+    super();
     this.javaProject = project;
-  }
-  visitLatticeFromTop(aLattice: Lattice): void {
-    throw new Error("Method not implemented.");
-  }
-  visitLatticeFromBottom(aLattice: Lattice): void {
-    throw new Error("Method not implemented.");
-  }
-  getCurrentVisitDirection(): Direction {
-    throw new Error("Method not implemented.");
-  }
-  visitLatticeNode(latticeNode: LatticeNode, direction: Direction): void {
-    throw new Error("Method not implemented.");
-  }
-  processVisitedNode(node: LatticeNode): void {
-    throw new Error("Method not implemented.");
-  }
-  reset(): void {
-    throw new Error("Method not implemented.");
   }
 
   processNode(node: LatticeNode): void {
-    let intersection: Set<Object> | null = null;
-    const extent: Set<Object> = node.getExtent();
-    const classesToProcess: Object[] = Array.from(extent);
+    let intersection: Set<any> | null = null;
+    const extent: Set<any> = node.getExtent();
+
+    const classesToProcess: any[] = Array.from(extent);
 
     let typeHierarchy: ITypeHierarchy | null = null;
+    const pMonitor: IProgressMonitor = new NullProgressMonitor();
+
     while (classesToProcess.length > 0) {
       const nextClass: IType = classesToProcess.shift() as IType;
+
       try {
-        typeHierarchy = nextClass.newTypeHierarchy(null);
+        typeHierarchy = nextClass.newTypeHierarchy(pMonitor);
         const itsAncestors: IType[] = typeHierarchy.getAllSupertypes(nextClass);
 
-        intersection = new Set<Object>(extent);
+        intersection = new Set<any>(extent);
         itsAncestors.forEach((ancestor) => {
           if (intersection!.has(ancestor)) {
             intersection!.delete(ancestor);
@@ -59,9 +47,7 @@ export class PurgeExtentsVisitor implements Visitor {
           }
         });
       } catch (jme: any) {
-        if (jme instanceof JavaModelException) {
-          console.error(jme);
-        }
+        console.error(jme);
       }
     }
   }

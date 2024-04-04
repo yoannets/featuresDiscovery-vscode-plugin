@@ -1,7 +1,6 @@
-import { Direction, Visitor } from "../Visitor";
+import { Visitor } from "../Visitor";
 import { LatticeNode } from "../../model/LatticeNode";
 import { ReverseInheritanceRelationBuilder } from "../../../input/impl/ReverseInheritanceRelationBuilder";
-import { Lattice } from "../../model/Lattice";
 import {
   IType,
   IMethod,
@@ -9,6 +8,7 @@ import {
   IProgressMonitor,
   NullProgressMonitor,
 } from "../../../polyfills/eclipse";
+import { AbstractVisitor } from "./AbstractVisitor";
 
 /**
  * This visitor traverses the lattice, and for each node, purges the extent of
@@ -29,30 +29,15 @@ import {
  * implementations. This is a case where a feature was recognized by the developer as such, and
  * expressed it in an interface. The visitor that identifies candidate nodes should mark it as such
  */
-export class ComplexPurgeExtentsVisitor implements Visitor {
+export class ComplexPurgeExtentsVisitor
+  extends AbstractVisitor
+  implements Visitor
+{
   private relationBuilder: ReverseInheritanceRelationBuilder;
 
   constructor(builder: ReverseInheritanceRelationBuilder) {
+    super();
     this.relationBuilder = builder;
-  }
-
-  visitLatticeFromTop(aLattice: Lattice): void {
-    throw new Error("Method not implemented.");
-  }
-  visitLatticeFromBottom(aLattice: Lattice): void {
-    throw new Error("Method not implemented.");
-  }
-  getCurrentVisitDirection(): Direction {
-    throw new Error("Method not implemented.");
-  }
-  visitLatticeNode(latticeNode: LatticeNode, direction: Direction): void {
-    throw new Error("Method not implemented.");
-  }
-  processVisitedNode(node: LatticeNode): void {
-    throw new Error("Method not implemented.");
-  }
-  reset(): void {
-    throw new Error("Method not implemented.");
   }
 
   public processNode(node: LatticeNode): void {

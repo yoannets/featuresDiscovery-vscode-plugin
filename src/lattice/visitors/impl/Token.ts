@@ -32,6 +32,6 @@ export class Token {
   }
 
   public isTypeName(): boolean {
-    return this._chars.match(/[a-zA-Z0-9.]+/) !== null;
+    return /[a-zA-Z0-9.]+/.test(this._chars);
   }
 }
